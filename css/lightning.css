@@ -43,6 +43,10 @@
   cursor: pointer;
 }
 
+.contact-2 {
+  min-height: 40rem;
+}
+
 #cart-list-table td {
   line-height: 2.5rem;
 }
