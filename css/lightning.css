@@ -5,7 +5,8 @@
 }
 
 .call-service {
-
+  background-color: #1E824C;
+  border-color: #1E824C; 
 }
 
 .price {
@@ -13,7 +14,7 @@
 }
 
 .jumbotron-heading {
-  font-weight: 300 !important;
+  font-weight: 200 !important;
   margin-bottom: 5rem;
 }
 
