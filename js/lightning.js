@@ -30,14 +30,15 @@ $(document).ready(function() {
     for (let [phone, item] of cart) {
       let size = item.length;
       if (size > 0) {
-        html += '<tr class="table-info"><td colspan="2">iPhone ' + phone + '</td></tr>';
+        html += '<tr class="table-info"><td colspan="3">iPhone ' + phone + '</td></tr>';
       }
       while(size > 0) {
-        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + "</tr>";
+        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + '<td width="5% !important"><button class="btn btn-sm btn-danger delete-item" data-toggle="tooltip" data-placement="right" title="Удалить"><i class="fa fa-times fa-1x"></i></button></td>' + "</tr>";
         size--;
       }
     }
     $("#cart-list").html(html);
+    $('[data-toggle="tooltip"]').tooltip();
   };
 
   $(".service-table tr").click(function() {

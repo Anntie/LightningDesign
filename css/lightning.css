@@ -21,6 +21,14 @@
   color: #fff !important;
 }
 
+.delete-item {
+  cursor: pointer;
+}
+
+#cart-list-table td {
+  line-height: 2.5rem;
+}
+
 nav {
   -webkit-transition: all .15s ease;
   -moz-transition: all .15s ease;
