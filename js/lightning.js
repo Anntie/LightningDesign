@@ -16,12 +16,12 @@ $(document).ready(function() {
   let price = 0;
 
   let cart = new Map();
-  cart.set("5", iPhone5);
-  cart.set("5s", iPhone5s);
-  cart.set("SE", iPhoneSE);
-  cart.set("6", iPhone6);
-  cart.set("6s", iPhone6s);
-  cart.set("7", iPhone7);
+  cart.set("5_", iPhone5);
+  cart.set("5s_", iPhone5s);
+  cart.set("SE_", iPhoneSE);
+  cart.set("6_", iPhone6);
+  cart.set("6s_", iPhone6s);
+  cart.set("7_", iPhone7);
 
 
   const redraw = function() {
@@ -30,15 +30,25 @@ $(document).ready(function() {
     for (let [phone, item] of cart) {
       let size = item.length;
       if (size > 0) {
-        html += '<tr class="table-info"><td colspan="3">iPhone ' + phone + '</td></tr>';
+        html += '<tr class="table-info"><td colspan="3">iPhone ' + phone.slice(0, -1) + '</td></tr>';
       }
       while(size > 0) {
-        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + '<td width="5% !important"><button class="btn btn-sm btn-danger delete-item" data-toggle="tooltip" data-placement="right" title="Удалить"><i class="fa fa-times fa-1x"></i></button></td>' + "</tr>";
+        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item" data-toggle="tooltip" data-placement="right" title="Удалить"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
         size--;
       }
     }
     $("#cart-list").html(html);
     $('[data-toggle="tooltip"]').tooltip();
+
+    $(".delete-item").click(function() {
+      let tr = $(this).parent().parent();
+      let index = tr.data('index');
+      let phone = tr.data('phone');
+      let item = $(cart.get(phone)[index]);
+      item.trigger('click');
+      tr.remove();
+      redraw();
+    });
   };
 
   $(".service-table tr").click(function() {
