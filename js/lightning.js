@@ -6,4 +6,13 @@ $(document).ready(function() {
       $(".sticky-event").removeClass('navbar-sticked');
     }
   });*/
+
+  $(".service-table tr").click(function() {
+    if ($(this).hasClass('bg-primary')) {
+      $(this).removeClass('bg-primary');
+    } else {
+      $(this).addClass('bg-primary');
+    }
+  });
+
 });
