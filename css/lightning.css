@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Arsenal:400,700&subset=cyrillic');
 
 * {
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Arsenal', sans-serif;
 }
 
 .navbar-sticked {
@@ -9,7 +9,7 @@
 }
 
 .navbar-custom {
-  background-color: #26A65B;
+  background-color: #1E824C;
 }
 
 .nav-link {
