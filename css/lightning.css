@@ -17,6 +17,10 @@ th {
   text-align: center !important;
 }
 
+.service-link:focus {
+  display: none;
+}
+
 .card-layout > div {
   margin-top: 2rem;
 }
