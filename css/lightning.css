@@ -13,6 +13,10 @@ nav {
   transition: all .15s ease;
 }
 
+th {
+  text-align: center !important;
+}
+
 .card-layout > div {
   margin-top: 2rem;
 }
