@@ -18,7 +18,7 @@ th {
 }
 
 .service-link:focus {
-  display: none;
+  outline: none;
 }
 
 .card-layout > div {
