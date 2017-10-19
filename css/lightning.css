@@ -6,7 +6,13 @@
 
 .call-service {
   background-color: #1E824C;
-  border-color: #1E824C; 
+  border-color: #1E824C !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.call-service:hover {
+  background-color: #1E824C;
+  color: #fff;
 }
 
 .price {
