@@ -7,6 +7,13 @@ $(document).ready(function() {
     }
   });*/
 
+  $(".page-scroll").click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top
+      }, 300);
+  });
+
   let iPhone5 = [];
   let iPhone5s = [];
   let iPhoneSE = [];
@@ -33,7 +40,7 @@ $(document).ready(function() {
         html += '<tr class="table-info"><td colspan="3">iPhone ' + phone.slice(0, -1) + '</td></tr>';
       }
       while(size > 0) {
-        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item" data-toggle="tooltip" data-placement="right" title="Удалить"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
+        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
         size--;
       }
     }
