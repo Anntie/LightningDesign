@@ -6,7 +6,7 @@
 
 .call-service {
   background-color: #1E824C;
-  border-color: #1E824C; 
+  border-color: #1E824C !important;
 }
 
 .price {
