@@ -10,6 +10,17 @@ $(document).ready(function() {
   let cart = [];
   let price = 0;
 
+  const redraw = function() {
+    let size = cart.length;
+    let html = "";
+    while(size > 0) {
+      html += "<tr data-index=\"" + (size - 1) + "\">" + $(cart[size - 1]).html() + "</tr>";
+      size--;
+    }
+    console.log(html);
+    $("#cart-list").html(html);
+  };
+
   $(".service-table tr").click(function() {
     if ($(this).hasClass('bg-primary')) {
       $(this).removeClass('bg-primary');
@@ -20,9 +31,11 @@ $(document).ready(function() {
       }
       if (price <= 0) {
         $(".price").addClass('d-none');
+        $("#cart-list-table").addClass('d-none');
       } else {
         $(".price").html("Общая стоимость: ₴" + price);
       }
+      redraw();
     } else {
       $(this).addClass('bg-primary');
       cart.push(this);
@@ -30,9 +43,11 @@ $(document).ready(function() {
       if (price > 0) {
         if ($(".price").hasClass('d-none')) {
           $(".price").removeClass('d-none');
+          $("#cart-list-table").removeClass('d-none');
         }
         $(".price").html("Общая стоимость: ₴" + price);
       }
+      redraw();
     }
   });
 
