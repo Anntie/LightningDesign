@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,700&subset=cyrillic');
+
+* {
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
 .navbar-sticked {
   background-color: #913D88;
 }
