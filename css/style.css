@@ -119,12 +119,12 @@ p {
   font-size: .9rem; }
 
 .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #C0392B ;
-  border-color: #C0392B; }
+  background-color: #446CB3 ;
+  border-color: #446CB3; }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #C0392B;
-  border-color: #C0392B; }
+  background-color: #446CB3;
+  border-color: #446CB3; }
 
 .btn-outline-primary, .btn-outline-primary:visited {
   color: #59a0d7;
