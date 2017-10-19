@@ -4,6 +4,11 @@
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
+.jumbotron-heading {
+  font-weight: 200 !important;
+  margin-bottom: 5rem;
+}
+
 .navbar-sticked {
   background-color: #913D88;
 }
