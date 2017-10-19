@@ -21,6 +21,10 @@ th {
   text-align: center !important;
 }
 
+.table-hover td {
+  cursor: pointer;
+}
+
 .service-link:focus {
   outline: none;
 }
