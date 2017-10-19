@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Arsenal:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic');
 
 * {
-  font-family: 'Arsenal', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .jumbotron-heading {
-  font-weight: 200 !important;
+  font-weight: 300 !important;
   margin-bottom: 5rem;
 }
 
