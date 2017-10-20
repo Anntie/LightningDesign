@@ -4,18 +4,19 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
+.pb-25 {
+  max-width: 100%;
+}
+
 .call-service {
   background-color: #1E824C;
   border-color: #1E824C !important;
-<<<<<<< HEAD
-=======
   transition: all 0.2s ease-in-out;
 }
 
 .call-service:hover {
   background-color: #1E824C;
   color: #fff;
->>>>>>> 2097187b84ca1c438c179993413c22d8333e149b
 }
 
 .price {
