@@ -11,8 +11,10 @@ $(document).ready(function() {
       e.preventDefault();
       $('html, body').animate({
           scrollTop: $($(this).attr('href')).offset().top
-      }, 300);
+      }, 400);
   });
+
+  $(".alert").alert();
 
   let iPhone5 = [];
   let iPhone5s = [];
@@ -33,14 +35,19 @@ $(document).ready(function() {
 
   const redraw = function() {
     let html = "";
+    let data = [];
 
     for (let [phone, item] of cart) {
       let size = item.length;
+      const model = phone.slice(0, -1);
       if (size > 0) {
-        html += '<tr class="table-info"><td colspan="3">iPhone ' + phone.slice(0, -1) + '</td></tr>';
+        html += '<tr class="table-info"><td colspan="3">iPhone ' + model + '</td></tr>';
       }
       while(size > 0) {
-        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + $(item[size - 1]).html() + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
+        let value = $(item[size - 1]).html();
+        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + value + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
+        value = value.replace(/\s/g, '');
+        data.push({model: model, value: value});
         size--;
       }
     }
@@ -48,14 +55,15 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 
     $(".delete-item").click(function() {
-      let tr = $(this).parent().parent();
-      let index = tr.data('index');
-      let phone = tr.data('phone');
-      let item = $(cart.get(phone)[index]);
+      const tr = $(this).parent().parent();
+      const index = tr.data('index');
+      const phone = tr.data('phone');
+      const item = $(cart.get(phone)[index]);
       item.trigger('click');
       tr.remove();
       redraw();
     });
+    $("#order-data").val(JSON.stringify(data));
   };
 
   $(".service-table tr").click(function() {
@@ -128,6 +136,52 @@ $(document).ready(function() {
       }
       redraw();
     }
+  });
+
+  $("#order-form").submit(function(e) {
+    e.preventDefault();
+    redraw();
+    const name = $("#name").val();
+    const phone = $("#phone").val();
+    const order  = $("#order-data").val();
+
+    if (!name || !phone || !order) {
+      $("#warning").fadeIn();
+      setTimeout(function() {
+        $("#warning").fadeOut();
+      }, 5000);
+      return false;
+    }
+
+    const data = {
+      'name': name,
+      'phone': phone,
+      'data': order
+    };
+
+    $.ajax({
+      url: 'order/',
+      type: 'POST',
+      dataType: 'JSON',
+      data: data
+    })
+    .done(function() {
+      $("#success").fadeIn();
+      setTimeout(function() {
+        $("#success").fadeOut();
+      }, 5000);
+    })
+    .fail(function() {
+      $("#error").fadeIn();
+      setTimeout(function() {
+        $("#error").fadeOut();
+      }, 5000);
+    })
+    .always(function() {
+      console.log(data);
+    });
+
+
   });
 
 });

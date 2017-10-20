@@ -174,13 +174,22 @@
 					<div class="col-sm-12 col-md-7 text-center">
 						<h2>Ваш заказ</h2>
 						<p class="lead constrain-width mt-4">Оформите заказ онлайн и получите скидку 5%!</p>
-						<form class="contact-form mt-4">
+						<form class="contact-form mt-4" id="order-form">
+							<div class="alert alert-success col-md-12" style="display: none;" id="success" role="alert">
+								Ваш заказ принят!
+							</div>
+							<div class="alert alert-danger col-md-12" style="display: none;" id="error" role="alert">
+								Произошла ошибка при размещении заказа. Попробуйте перезагрузить страницу.
+							</div>
+							<div class="alert alert-warning col-md-12" style="display: none;" id="warning" role="alert">
+							  Пожалуйста, заполните форму заказа.
+							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" class="form-control-custom mb-4" placeholder="Имя">
+									<input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control-custom mb-4" placeholder="Номер телефона">
+									<input type="text" id="phone" class="form-control-custom mb-4" placeholder="Номер телефона">
 								</div>
 								<br />
 							</div>
@@ -199,9 +208,10 @@
 									<h4 class="price d-none"></h2>
 								</div>
 								<div class="col-md-12">
-									<button type="submit" class="btn btn-primary btn-lg mb-4">Отправить</button>
+									<button id="submit" type="submit" class="btn btn-primary btn-lg mb-4">Отправить</button>
 								</div>
 							</div>
+							<input type="hidden" id="order-data" />
 						</form>
 					</div>
 					<div class="col-sm-12 col-md-5 p-md-3" style="padding-top: 0 !important;">
