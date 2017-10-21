@@ -14,6 +14,20 @@ $(document).ready(function() {
       }, 400);
   });
 
+  const alertError = function() {
+    $("#error").fadeIn();
+    setTimeout(function() {
+      $("#error").fadeOut();
+    }, 5000);
+  };
+
+  const alertSuccess = function() {
+    $("#success").fadeIn();
+    setTimeout(function() {
+      $("#success").fadeOut();
+    }, 5000);
+  };
+
   $(".alert").alert();
 
   let iPhone5 = [];
@@ -165,20 +179,15 @@ $(document).ready(function() {
       dataType: 'JSON',
       data: data
     })
-    .done(function() {
-      $("#success").fadeIn();
-      setTimeout(function() {
-        $("#success").fadeOut();
-      }, 5000);
+    .done(function(res) {
+      if (res != 0) {
+        alertError();
+      } else {
+        alertSuccess();
+      }
     })
     .fail(function() {
-      $("#error").fadeIn();
-      setTimeout(function() {
-        $("#error").fadeOut();
-      }, 5000);
-    })
-    .always(function() {
-      console.log(data);
+      alertError();
     });
 
 
