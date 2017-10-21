@@ -60,7 +60,7 @@ $(document).ready(function() {
       while(size > 0) {
         let value = $(item[size - 1]).html();
         html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + value + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
-        value = value.replace(/\s/g, '');
+        value = value.replace(/\s/g, ' ');
         data.push({model: model, value: value});
         size--;
       }
