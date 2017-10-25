@@ -47,6 +47,10 @@ $(document).ready(function() {
   cart.set("7_", iPhone7);
 
 
+  const clearCart = function() {
+
+  };
+
   const redraw = function() {
     let html = "";
     let data = [];
