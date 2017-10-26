@@ -183,3 +183,12 @@ th {
 .service-modal .modal-backdrop {
   display: none;
   opacity: 0; }
+
+#phone {
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

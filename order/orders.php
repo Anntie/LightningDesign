@@ -1,5 +1,4 @@
 <?php
-
   require("Connection.php");
   $pdo = (new Connection())->getConnection();
 
@@ -15,17 +14,20 @@
     "6s" => array(),
     "7" => array()
   );
+
   foreach ($rows as $row) {
     $data = json_decode($row["data"]);
-    $data = (array) $data[0];
-    $model = $data["model"];
-    $entry = array(
-      "id" => $row["id"],
-      "name" => $row["name"],
-      "phone" => $row["phone"],
-      "data" => $data["value"]
-    );
-    array_push($set[$model], $entry);
+    foreach ($data as $item) {
+      $item = (array) $item;
+      $model = $item["model"];
+      $entry = array(
+        "id" => $row["id"],
+        "name" => $row["name"],
+        "phone" => $row["phone"],
+        "data" => $item["value"]
+      );
+      array_push($set[$model], $entry);
+    }
   }
 
 ?>
@@ -63,8 +65,6 @@
         ?>
       </tbody>
     </table>
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
