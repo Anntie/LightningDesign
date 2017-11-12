@@ -34,8 +34,11 @@ $(document).ready(function() {
   let iPhone5s = [];
   let iPhoneSE = [];
   let iPhone6 = [];
+  let iPhone6Plus = [];
   let iPhone6s = [];
+  let iPhone6sPlus = [];
   let iPhone7 = [];
+  let iPhone7Plus = [];
   let price = 0;
 
   let cart = new Map();
@@ -43,8 +46,11 @@ $(document).ready(function() {
   cart.set("5s_", iPhone5s);
   cart.set("SE_", iPhoneSE);
   cart.set("6_", iPhone6);
+  cart.set("6 Plus_", iPhone6Plus);
   cart.set("6s_", iPhone6s);
+  cart.set("6s Plus_", iPhone6sPlus);
   cart.set("7_", iPhone7);
+  cart.set("7 Plus_", iPhone7Plus);
 
 
   const clearCart = function() {
@@ -54,7 +60,6 @@ $(document).ready(function() {
   const redraw = function() {
     let html = "";
     let data = [];
-
     for (let [phone, item] of cart) {
       let size = item.length;
       const model = phone.slice(0, -1);
@@ -101,11 +106,20 @@ $(document).ready(function() {
         case "iPhone6-tbody":
           cart = iPhone6;
           break;
+        case "iPhone6Plus-tbody":
+          cart = iPhone6Plus;
+          break;
         case "iPhone6s-tbody":
           cart = iPhone6s;
           break;
+        case "iPhone6sPlus-tbody":
+          cart = iPhone6sPlus;
+          break;
         case "iPhone7-tbody":
           cart = iPhone7;
+          break;
+        case "iPhone7Plus-tbody":
+          cart = iPhone7Plus;
           break;
       }
       let index = cart.indexOf(this);
@@ -136,11 +150,20 @@ $(document).ready(function() {
         case "iPhone6-tbody":
           iPhone6.push(this);
           break;
+        case "iPhone6Plus-tbody":
+          iPhone6Plus.push(this);
+          break;
         case "iPhone6s-tbody":
           iPhone6s.push(this);
           break;
+        case "iPhone6sPlus-tbody":
+          iPhone6sPlus.push(this);
+          break;
         case "iPhone7-tbody":
           iPhone7.push(this);
+          break;
+        case "iPhone7Plus-tbody":
+          iPhone7Plus.push(this);
           break;
       }
 
@@ -193,7 +216,6 @@ $(document).ready(function() {
     .fail(function() {
       alertError();
     });
-
 
   });
 
