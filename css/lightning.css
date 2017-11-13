@@ -192,3 +192,7 @@ th {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+.tab-link {
+  color: #2c3e50 !important;
+}
