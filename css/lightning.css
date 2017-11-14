@@ -184,7 +184,7 @@ th {
   display: none;
   opacity: 0; }
 
-#phone, #date, #name, #adress, #date-mobile {
+#phone, #date, #name, #adress, #date-mobile, #phonetocall {
   -webkit-border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
   -moz-border-radius-topleft: 0;

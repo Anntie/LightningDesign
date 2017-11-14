@@ -28,14 +28,11 @@
 					<a class="navbar-brand" href="#"><img src="images/logo-2.svg" width="42" height="42" style="padding-top: 3px; margin-right: 4px;" class="d-inline-block align-top" alt=""><span style="font-family: 'Raleway', sans-serif !important; font-weight: 400;">lightning</span></a>
 					<div class="pull-xs-right justify-content-end">
 						<ul class="navbar-nav mt-2 mt-md-0">
-							<li class="nav-item">
+							<!--<li class="nav-item">
 								<a class="nav-link" href="#">УКР</a>
-							</li>
+							</li>-->
 							<li class="nav-item">
 								<a class="nav-link" href="tel:+380992042437">+380992042437</a>
-							</li>
-							<li class="nav-item d-none d-md-block">
-								<a class="btn btn-outline-white btn-outline page-scroll" href="#services-section" data-toggle="modal" data-target="#helpModal">Заказать</a>
 							</li>
 						</ul>
 					</div>
@@ -46,7 +43,7 @@
 					<h1 class="jumbotron-heading">Ремонт <span style="font-family: 'Raleway', sans-serif; font-weight: 300;">iPhone</span> с выездом мастера в Киеве</h1>
 					<p>
 						<a href="#services-section" class="btn btn-primary btn-lg mb-2 mr-2 ml-2 page-scroll">Узнать стоимость ремонта</a>
-						<a href="#" class="btn btn-outline-white btn-lg mb-2 ml-2 ml-2 call-service">Вызвать мастера</a>
+						<a href="#" class="btn btn-outline-white btn-lg mb-2 ml-2 ml-2 call-service" data-toggle="modal" data-target="#helpModal">Вызвать мастера</a>
 					</p>
 				</div>
 			</div>
@@ -323,19 +320,27 @@
 
 		<!-- Help -->
 		<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
-		  <div class="modal-dialog modal-lg" role="document">
+		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h5 class="modal-title" id="helpModalLabel">Как сделать заказ</h5>
+		        <h5 class="modal-title" id="helpModalLabel">Вызвать мастера</h5>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
 		      <div class="modal-body">
-						<!-- Content -->
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ок</button>
+						<h5>Оставьте ваш номер, и мы вам перезвоним!</h5>
+						<form class="mt-4" id="callback-form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="input-group">
+									  <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
+										<input type="text" id="phonetocall" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Ваш номер">
+										<input type="submit" class="btn btn-primary mb-4" style="margin-left: 5px;" value="Перезвоните мне" />
+									</div>
+								</div>
+							</div>
+						</form>
 		      </div>
 		    </div>
 		  </div>
@@ -892,5 +897,6 @@
 		<script src="js/datetimepicker.min.js"></script>
 		<script src="js/lightning.js"></script>
 		<script src="js/streets.js"></script>
+		<script src="js/phone.js"></script>
   </body>
   </html>
