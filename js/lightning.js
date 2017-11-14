@@ -92,9 +92,9 @@ $(document).ready(function() {
     });
     $("#order-data").val(JSON.stringify(data));
     if (price > 0) {
-      $(".page-scroll").prop('disabled', false).removeClass('btn-secondary').addClass('btn-primary');
+      $(".gotocart").prop('disabled', false).removeClass('btn-secondary').addClass('btn-primary');
     } else {
-      $(".page-scroll").prop('disabled', true).removeClass('btn-primary').addClass('btn-secondary');
+      $(".gotocart").prop('disabled', true).removeClass('btn-primary').addClass('btn-secondary');
     }
   };
 
