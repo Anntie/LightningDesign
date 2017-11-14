@@ -197,9 +197,18 @@ th {
   color: #2c3e50 !important;
 }
 
-.page-scroll:hover .btn-secondary {
-  background-color: #868e96;
-  border-color: #868e96;
+.btn-secondary:hover {
+  background-color: #868e96 !important;
+  border-color: #868e96 !important;
+}
+
+.input-group-addon {
+  min-width: 50px !important;
+  text-align: center !important;
+}
+
+.input-group-addon > span {
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {
