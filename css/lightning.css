@@ -197,6 +197,11 @@ th {
   color: #2c3e50 !important;
 }
 
+.page-scroll:hover .btn-secondary {
+  background-color: #868e96;
+  border-color: #868e96;
+}
+
 @media (max-width: 767px) {
   #date {
     display: none;
