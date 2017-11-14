@@ -7,6 +7,10 @@ $(document).ready(function() {
     }
   });*/
 
+  var today = Date.now();
+
+  $("#date").datetimepicker();
+
   $(".page-scroll").click(function(e) {
       e.preventDefault();
       $('html, body').animate({

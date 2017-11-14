@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/lightning.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108636989-1"></script>
 		<script>
@@ -198,7 +199,10 @@
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
+									<div class="input-group">
+										<span class="input-group-addon mb-4"><span class="fa fa-id-card-o"></span></span>
+										<input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
+									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-group">
@@ -210,24 +214,15 @@
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<input type="email" id="email" class="form-control-custom mb-4" placeholder="Email">
-								</div>
-								<div class="col-md-6">
-									<input type="text" id="adress" class="form-control-custom mb-4" placeholder="Адрес">
-								</div>
-								<br />
-							</div>
-							<div class="row">
-								<div class="col-md-6">
 									<div class="input-group">
-									  <span class="input-group-addon"><span class="fa fa-calendar-check-o"></span></span>
-									  <input type="date" id="date" class="form-control" aria-label="Дата">
+									  <span class="input-group-addon mb-4"><span class="fa fa-calendar-check-o"></span></span>
+									  <input type="text" id="date" class="form-control-custom mb-4" aria-label="Дата">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-group">
-									  <span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
-									  <input type="time" id="time" class="form-control" aria-label="Время">
+										<span class="input-group-addon mb-4"><span class="fa fa-map-marker"></span></span>
+										<input type="text" id="adress" class="form-control-custom mb-4" placeholder="Адрес">
 									</div>
 								</div>
 								<br />
@@ -868,6 +863,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/datetimepicker.min.js"></script>
 		<script src="js/lightning.js"></script>
   </body>
   </html>
