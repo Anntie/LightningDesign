@@ -68,7 +68,7 @@ $(document).ready(function() {
       let size = item.length;
       const model = phone.slice(0, -1);
       if (size > 0) {
-        html += '<tr class="table-info"><td colspan="3">iPhone ' + model + '</td></tr>';
+        html += '<tr class="table-info"><td style=\"background-color: #3498db; color: #fff;\" colspan="3">iPhone ' + model + '</td></tr>';
       }
       while(size > 0) {
         let value = $(item[size - 1]).html();
@@ -244,5 +244,5 @@ $(document).ready(function() {
       cb(matches);
     };
   };
-  
+
 });
