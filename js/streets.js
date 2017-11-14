@@ -1,11 +1,8 @@
 function initialize() {
   var input = document.getElementById("adress");
-  var defaultBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(50.590866, 30.239638),
-    new google.maps.LatLng(50.226001, 30.900607));
 
   var options = {
-    bounds: defaultBounds,
+    bounds: new google.maps.Circle({center: new google.maps.LatLng(50.436338, 30.577387), radius: 200}).getBounds(),
     componentRestrictions: {country: "ua"},
     types: ['address']
   };
