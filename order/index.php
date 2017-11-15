@@ -20,7 +20,7 @@
   // Telegram API
   require("telegram.php");
 
-  $message = "Новый заказ!\nЗаказчик: " . $_POST["name"] . "\nТелефон: " . $_POST["phone"] . "\nАдрес: " . $_POST['adress'];
+  $message = "<b>Новый заказ!</b>\nЗаказчик: " . $_POST["name"] . "\nТелефон: +38 " . $_POST["phone"] . "\nАдрес: " . $_POST['adress'];
 
   // Andrew : 210219337
   sendMessage(210219337, $message);
