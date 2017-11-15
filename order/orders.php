@@ -24,6 +24,8 @@
         "id" => $row["id"],
         "name" => $row["name"],
         "phone" => $row["phone"],
+        "adress" => $row["adress"],
+        "date" => $row["date"],
         "data" => $item["value"]
       );
       array_push($set[$model], $entry);
@@ -50,6 +52,8 @@
         <tr>
           <th>Имя заказчика</th>
           <th>Телефон</th>
+          <th>Адрес</th>
+          <th>Дата</th>
           <th>Название услуги</th>
           <th colspan="2" style="text-align: right;">Стоимость</th>
         </tr>
@@ -57,9 +61,9 @@
       <tbody id="orders-list" class="text-center">
         <?php
           foreach ($set as $model => $orders) {
-            echo "<tr class=\"table-info text-left\"><td colspan=\"5\">iPhone {$model}</td></tr>";
+            echo "<tr class=\"table-info text-left\"><td colspan=\"7\">iPhone {$model}</td></tr>";
             foreach ($orders as $order) {
-              echo "<tr data-id=\"" . $order["id"] . "\"><td>" . $order["name"] . "</td><td>" . $order["phone"] . "</td>" . $order["data"] . '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td></tr>';
+              echo "<tr data-id=\"" . $order["id"] . "\"><td>" . $order["name"] . "</td><td>" . $order["phone"] . "</td><td>" . $order["adress"] . "</td><td>" . $order["date"] . "</td>" . $order["data"] . '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td></tr>';
             }
           }
         ?>

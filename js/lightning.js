@@ -1,3 +1,4 @@
+// Lazy image loading
 [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
   img.setAttribute('src', img.getAttribute('data-src'));
   img.onload = function() {
@@ -6,14 +7,6 @@
 });
 
 $(document).ready(function() {
-  /*$(window).scroll(function() {
-    if ($(this).scrollTop() > 140) {
-      $(".sticky-event").addClass('navbar-sticked');
-    } else {
-      $(".sticky-event").removeClass('navbar-sticked');
-    }
-  });*/
-
   var today = Date.now();
 
   $("#date").datetimepicker();
@@ -26,16 +19,16 @@ $(document).ready(function() {
   });
 
   const alertError = function() {
-    $("#error").fadeIn();
+    $(".alert-error").fadeIn();
     setTimeout(function() {
-      $("#error").fadeOut();
+      $(".alert-error").fadeOut();
     }, 5000);
   };
 
   const alertSuccess = function() {
-    $("#success").fadeIn();
+    $(".alert-success").fadeIn();
     setTimeout(function() {
-      $("#success").fadeOut();
+      $(".alert-success").fadeOut();
     }, 5000);
   };
 
@@ -65,8 +58,16 @@ $(document).ready(function() {
 
 
   const clearCart = function() {
-
+    $(".bg-primary").each(function() {
+      $(this).trigger('click');
+    });
   };
+
+  const clearForm = function() {
+    $("input").each(function() {
+      $(this).val("");
+    });
+  }
 
   const redraw = function() {
     let html = "";
@@ -195,26 +196,82 @@ $(document).ready(function() {
     }
   });
 
+  $("#callback-form").submit(function(e) {
+    e.preventDefault();
+    let phone = $("#phonetocall").val();
+    if (!phone) {
+      $("#warning-cb").fadeIn();
+      setTimeout(function() {
+        $("#warning-cb").fadeOut();
+      }, 5000);
+    }
+
+    const data = {'phone': phone};
+
+    $.ajax({
+      url: 'order/callback.php',
+      type: 'POST',
+      dataType: 'JSON',
+      data: data
+    })
+    .done(function(res) {
+      if (res != 0) {
+        $("#error-cb").fadeIn();
+        setTimeout(function() {
+          $("#error-cb").fadeOut();
+        }, 5000);
+      } else {
+        $("#success-cb").fadeIn();
+      }
+    })
+    .fail(function() {
+      $("#error-cb").fadeIn();
+      setTimeout(function() {
+        $("#error-cb").fadeOut();
+      }, 5000);
+    });
+
+    $(this).fadeOut();
+    $("#phonetocall").val('');
+    $("#callback-h5").fadeOut();
+    setTimeout(function() {
+      $("#helpModal").modal('hide');
+    }, 5000);
+
+  });
+
   $("#order-form").submit(function(e) {
     e.preventDefault();
     redraw();
     const name = $("#name").val();
     const phone = $("#phone").val();
+    const adress = $("#adress").val();
     const order  = $("#order-data").val();
 
-    if (!name || !phone || !order) {
+    let date;
+    const dateDesktop = $("#date").val();
+    const dateMobile = $("#date-mobile").val();
+
+    if ((!dateDesktop && !dateMobile) || !name || !phone || !order || !adress) {
       $("#warning").fadeIn();
       setTimeout(function() {
         $("#warning").fadeOut();
       }, 5000);
       return false;
+    } else {
+      date = (!dateMobile) ? dateDesktop : dateMobile;
     }
 
     const data = {
       'name': name,
       'phone': phone,
-      'data': order
+      'data': order,
+      'adress': adress,
+      'date': date
     };
+
+    clearCart();
+    clearForm();
 
     $.ajax({
       url: 'order/',
@@ -234,27 +291,5 @@ $(document).ready(function() {
     });
 
   });
-
-  var substringMatcher = function(strs) {
-    return function findMatches(q, cb) {
-      var matches, substringRegex;
-
-      // an array that will be populated with substring matches
-      matches = [];
-
-      // regex used to determine if a string contains the substring `q`
-      substrRegex = new RegExp(q, 'i');
-
-      // iterate through the pool of strings and for any string that
-      // contains the substring `q`, add it to the `matches` array
-      $.each(strs, function(i, str) {
-        if (substrRegex.test(str)) {
-          matches.push(str);
-        }
-      });
-
-      cb(matches);
-    };
-  };
 
 });
