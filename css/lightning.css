@@ -25,14 +25,14 @@
 }
 
 .content-4 {
-  background-color: #1C2A39;
+  background-color: #2b2d34;
   margin-top: 0 !important;
   color: #ecf0f1 !important;
-  padding: 2rem;
 }
 
 .content-4 > .container {
-  margin: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 6rem;
 }
 
 .h2-promo {
