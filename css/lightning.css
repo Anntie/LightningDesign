@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .pb-25 {
@@ -21,6 +22,27 @@
 
 .price {
   padding: 2rem;
+}
+
+.content-4 {
+  background-color: #1C2A39;
+  margin-top: 0 !important;
+  color: #ecf0f1 !important;
+  padding: 2rem;
+}
+
+.content-4 > .container {
+  margin: 0 !important;
+}
+
+.h2-promo {
+  font-family: "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
+}
+
+.p-promo {
+  color: #bdc3c7;
+  font-family: "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
+  font-weight: 400;
 }
 
 .jumbotron-heading {
