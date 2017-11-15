@@ -235,6 +235,15 @@ th {
 
 /* Lazy loading */
 
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
 @media (max-width: 767px) {
   #date {
     display: none;
