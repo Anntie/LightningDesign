@@ -13,7 +13,7 @@
 
   // Telegram API
 
-  $message = "<b>Перезвони клиенту!</b>\nНомер: +38{$phone}";
+  $message = "*Перезвони клиенту!*\nНомер: +38" . $phone;
 
   // Andrew : 210219337
   sendMessage(210219337, $message);
