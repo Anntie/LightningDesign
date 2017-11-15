@@ -12,7 +12,7 @@
   $statement->execute(array($phone));
 
   // Telegram API
-
+  require("telegram.php");
   $message = "*Перезвони клиенту!*\nНомер: +38" . $phone;
 
   // Andrew : 210219337
