@@ -233,6 +233,8 @@ th {
   margin: 0 auto;
 }
 
+/* Lazy loading */
+
 @media (max-width: 767px) {
   #date {
     display: none;
