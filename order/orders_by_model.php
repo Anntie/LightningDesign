@@ -6,26 +6,29 @@
   $exe->execute();
   $rows = $exe->fetchAll(PDO::FETCH_ASSOC);
 
-  $set = array();
+  $set = array(
+    "5" => array(),
+    "5s" => array(),
+    "SE" => array(),
+    "6" => array(),
+    "6s" => array(),
+    "7" => array()
+  );
 
   foreach ($rows as $row) {
     $data = json_decode($row["data"]);
     foreach ($data as $item) {
       $item = (array) $item;
-      $client = "<tr data-id=\"" . $row["id"] . "\" class=\"table-info text-left\"><td>" . $row['name'] . "</td><td>" . $row['phone'] . "</td><td style=\"right 0;\" colspan=\"2\"></td><td><span class=\"btn btn-sm btn-danger delete-item pull-right\"><i class=\"fa fa-times fa-1x\"></i></span></td></tr>";
+      $model = $item["model"];
       $entry = array(
         "id" => $row["id"],
         "name" => $row["name"],
-        "model" => $item["model"],
         "phone" => $row["phone"],
         "adress" => $row["adress"],
         "date" => $row["date"],
         "data" => $item["value"]
       );
-      if (empty($set[$client])) {
-        $set[$client] = array();
-      }
-      array_push($set[$client], $entry);
+      array_push($set[$model], $entry);
     }
   }
 
@@ -47,19 +50,20 @@
     <table class="table table-striped" id="orders-table">
       <thead class="thead-inverse">
         <tr>
-          <th>Дата</th>
-          <th>Модель</th>
-          <th>Название услуги</th>
-          <th>Цена</th>
+          <th>Имя заказчика</th>
+          <th>Телефон</th>
           <th>Адрес</th>
+          <th>Дата</th>
+          <th>Название услуги</th>
+          <th colspan="2" style="text-align: right;">Стоимость</th>
         </tr>
       </thead>
       <tbody id="orders-list" class="text-center">
         <?php
-          foreach ($set as $client => $orders) {
-            echo $client;
+          foreach ($set as $model => $orders) {
+            echo "<tr class=\"table-info text-left\"><td colspan=\"7\">iPhone {$model}</td></tr>";
             foreach ($orders as $order) {
-              echo "<tr data-id=\"" . $order["id"] . "\"><td>" . $order["date"] . "</td><td>" . $order["model"] . "</td>" . $order["data"] . "<td>" . $order["adress"] . "</td></tr>";
+              echo "<tr data-id=\"" . $order["id"] . "\"><td>" . $order["name"] . "</td><td>" . $order["phone"] . "</td><td>" . $order["adress"] . "</td><td>" . $order["date"] . "</td>" . $order["data"] . '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td></tr>';
             }
           }
         ?>
@@ -68,6 +72,5 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/orders.js"></script>
   </body>
   </html>
