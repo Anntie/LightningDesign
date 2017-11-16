@@ -28,6 +28,12 @@ $(document).ready(function() {
       }, 400);
   });
 
+  let dateInput = 0;
+
+  $("#date").click(function() {
+    dateInput = 1;
+  });
+
   const alertError = function() {
     $(".alert-error").fadeIn();
     setTimeout(function() {
@@ -269,7 +275,7 @@ $(document).ready(function() {
       }, 5000);
       return false;
     } else {
-      date = (!dateMobile) ? dateDesktop : dateMobile;
+      date = (dateInput === 0) ? dateMobile : dateDesktop;
     }
 
     const data = {
