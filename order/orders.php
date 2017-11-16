@@ -1,4 +1,11 @@
 <?php
+  session_start();
+  session_regenerate_id();
+  if(!isset($_SESSION['lightning']))
+  {
+      header("Location: ./");
+  }
+
   require("Connection.php");
   $pdo = (new Connection())->getConnection();
 
@@ -44,6 +51,26 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
 	</head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">lightning</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Заказы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="callbacks.php">Callback</a>
+            </li>
+          </ul>
+          <a href="logout.php" class="btn btn-outline-primary my-2 my-sm-0">Выйти</a>
+        </div>
+      </nav>
+    </header>
     <table class="table table-striped" id="orders-table">
       <thead class="thead-inverse">
         <tr>
