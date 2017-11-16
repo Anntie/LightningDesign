@@ -158,7 +158,7 @@ $(document).ready(function() {
         $(".price").addClass('d-none');
         $("#cart-list-table").addClass('d-none');
       } else {
-        $(".price").html("Общая стоимость: ₴" + price);
+        $(".price").html("Загальна вартість: ₴" + price);
       }
       redraw();
     } else {
@@ -200,7 +200,7 @@ $(document).ready(function() {
           $(".price").removeClass('d-none');
           $("#cart-list-table").removeClass('d-none');
         }
-        $(".price").html("Общая стоимость: ₴" + price);
+        $(".price").html("Загальна вартість: ₴" + price);
       }
       redraw();
     }

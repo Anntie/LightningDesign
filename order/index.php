@@ -18,6 +18,13 @@
   $statement->execute($row);
 
   // Telegram API
+  require("telegram.php");
+  $message = "*Новый заказ!*\nЗаказчик: " . $_POST["name"] . "\nТелефон: +38 " . $_POST["phone"] . "\nАдрес: " . $_POST['adress'];
+
+  // Andrew : 210219337
+  sendMessage(210219337, $message);
+  // Taras : 398164578
+  sendMessage(398164578, $message);
 
   exit('0');
 ?>
