@@ -280,9 +280,6 @@ $(document).ready(function() {
       'date': date
     };
 
-    clearCart();
-    clearForm();
-
     $.ajax({
       url: 'order/',
       type: 'POST',
@@ -294,6 +291,12 @@ $(document).ready(function() {
         alertError();
       } else {
         alertSuccess();
+        clearCart();
+        clearForm();
+
+        $('html, body').animate({
+            scrollTop: $("#order-form").offset().top
+        }, 400);
       }
     })
     .fail(function() {
