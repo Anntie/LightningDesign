@@ -287,7 +287,7 @@ $(document).ready(function() {
     };
 
     $.ajax({
-      url: 'order/',
+      url: 'order/order.php',
       type: 'POST',
       dataType: 'JSON',
       data: data
