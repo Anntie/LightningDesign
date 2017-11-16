@@ -5,6 +5,14 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.call-service {
+  background-color: #1E824C;
+}
+
+.call-service:focus {
+  background-color: #1E824C !important;
+}
+
 .pb-25 {
   max-width: 100%;
 }
