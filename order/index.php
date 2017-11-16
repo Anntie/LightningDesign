@@ -5,7 +5,7 @@
 		header("Location: orders.php");
 	}
   elseif (isset($_POST["password"])) {
-    if ($_POST["password"] == "taraspidoras))") {
+    if ($_POST["password"] == "xI5yPFQm") {
       $_SESSION['lightning'] = true;
   		header("Location: orders.php");
     } else {
