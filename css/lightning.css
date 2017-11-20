@@ -5,6 +5,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
+#logo {
+  width: 3rem;
+  height: 3rem;
+}
+
 .call-service {
   background-color: #1E824C;
 }
@@ -262,12 +267,40 @@ img[data-src] {
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #date {
     display: block;
   }
 
   #date-mobile {
     display: none;
+  }
+}
+
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+@media screen and (max-width: 362px) {
+  .xxs-display-none {
+    display: none;
+  }
+
+  .mr-2, .ml-2 {
+    margin: 0 auto !important;
+  }
+
+  .mb-2 {
+    margin-bottom: .8rem !important;
+  }
+
+  .cover-inner {
+    padding: 0 !important;
   }
 }

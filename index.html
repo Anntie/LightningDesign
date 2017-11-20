@@ -25,11 +25,11 @@
     <section class="cover-1 text-center">
 			<nav class="navbar sticky-event fixed-top navbar-expand-lg navbar-dark navbar-custom">
 				<div class="container">
-					<a class="navbar-brand" href="#"><img src="images/logo-2.svg" width="42" height="42" style="padding-top: 3px; margin-right: 4px;" class="d-inline-block align-top" alt=""><span style="font-family: 'Raleway', sans-serif !important; font-weight: 400;">lightning</span></a>
+					<a class="navbar-brand" href="#"><img src="images/logo-2.svg" id="logo" style="padding-top: 3px; margin-right: 4px;" class="d-inline-block align-top" alt="lightning"><span class="xxs-display-none" style="font-family: 'Raleway', sans-serif !important; font-weight: 400;">lightning</span></a>
 					<div class="pull-xs-right justify-content-end">
 						<ul class="navbar-nav mt-2 mt-md-0">
 							<li class="nav-item">
-								<a class="nav-link" href="ukrainian.html">УКР</a>
+								<a class="nav-link xxs-display-none" href="ukrainian.html">УКР</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="tel:+380992042437">+380963002435</a>
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="content-4">
+		<section class="content-4 d-none d-md-block">
 			<div class="container">
 				<div class="row justify-center">
 					<div class="col-md-6 pl-5 pr-5 text-center" >
@@ -218,53 +218,55 @@
 							<div class="alert alert-warning col-md-12" style="display: none;" id="warning" role="alert">
 							  Пожалуйста, заполните форму заказа.
 							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="input-group">
-										<span class="input-group-addon mb-4"><span class="fa fa-id-card-o"></span></span>
-										<input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="input-group">
+											<span class="input-group-addon mb-4"><span class="fa fa-id-card-o"></span></span>
+											<input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
+										</div>
 									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="input-group">
-									  <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
-										<input type="text" id="phone" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Номер телефона">
+									<div class="col-md-6">
+										<div class="input-group">
+										  <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
+											<input type="text" id="phone" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Номер телефона">
+										</div>
 									</div>
+									<br />
 								</div>
-								<br />
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="input-group">
-									  <span class="input-group-addon mb-4"><span class="fa fa-calendar-check-o"></span></span>
-									  <input type="text" id="date" class="form-control-custom mb-4" aria-label="Дата" placeholder="Дата">
-										<input type="datetime-local" id="date-mobile" class="form-control-custom mb-4" aria-label="Дата" placeholder="Дата">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="input-group">
+										  <span class="input-group-addon mb-4"><span class="fa fa-calendar-check-o"></span></span>
+										  <input type="text" id="date" class="form-control-custom mb-4" aria-label="Дата" placeholder="Дата">
+											<input type="datetime-local" id="date-mobile" class="form-control-custom mb-4" aria-label="Дата" placeholder="Дата">
+										</div>
 									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="input-group">
-										<span class="input-group-addon mb-4"><span class="fa fa-map-marker"></span></span>
-										<input type="text" id="adress" class="form-control-custom mb-4" placeholder="Адрес">
+									<div class="col-md-6">
+										<div class="input-group">
+											<span class="input-group-addon mb-4"><span class="fa fa-map-marker"></span></span>
+											<input type="text" id="adress" class="form-control-custom mb-4" placeholder="Адрес">
+										</div>
 									</div>
+									<br />
 								</div>
-								<br />
-							</div>
-							<div class="row" style="padding-top: 2rem;">
-								<div class="col-md-12">
-									<table class="table table-striped d-none" id="cart-list-table">
-									  <thead class="thead-inverse">
-									    <tr>
-									      <th>Название услуги</th>
-									      <th colspan="2" style="text-align: right;">Стоимость</th>
-									    </tr>
-									  </thead>
-									  <tbody id="cart-list">
-									  </tbody>
-									</table>
-									<h4 class="price d-none"></h2>
-								</div>
-								<div class="col-md-12">
-									<button id="submit" type="submit" class="btn btn-secondary gotocart btn-lg mb-4" disabled>Отправить</button>
+								<div class="row" style="padding-top: 2rem;">
+									<div class="col-md-12">
+										<table class="table table-striped d-none" id="cart-list-table">
+										  <thead class="thead-inverse">
+										    <tr>
+										      <th>Название услуги</th>
+										      <th colspan="2" style="text-align: right;">Стоимость</th>
+										    </tr>
+										  </thead>
+										  <tbody id="cart-list">
+										  </tbody>
+										</table>
+										<h4 class="price d-none"></h2>
+									</div>
+									<div class="col-md-12">
+										<button id="submit" type="submit" class="btn btn-secondary gotocart btn-lg mb-4" disabled>Отправить</button>
+									</div>
 								</div>
 							</div>
 							<input type="hidden" id="order-data" />
@@ -364,12 +366,14 @@
 							Пожалуйста, заполните форму.
 						</div>
 						<form class="mt-4" id="callback-form">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="input-group">
-									  <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
-										<input type="text" id="phonetocall" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Ваш номер">
-										<input type="submit" class="btn btn-primary mb-4" style="margin-left: 5px;" value="Перезвоните мне" />
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="input-group">
+										  <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
+											<input type="text" id="phonetocall" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Ваш номер">
+											<input type="submit" class="btn btn-primary mb-4" style="margin-left: 5px;" value="Перезвоните мне" />
+										</div>
 									</div>
 								</div>
 							</div>
