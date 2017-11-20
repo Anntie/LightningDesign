@@ -238,6 +238,7 @@ $(document).ready(function() {
         }, 5000);
       } else {
         $("#success-cb").fadeIn();
+        dataLayer.push({'event': 'callback'});
       }
     })
     .fail(function() {
@@ -303,6 +304,7 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $("#order-form").offset().top
         }, 400);
+        dataLayer.push({'event': 'order'});
       }
     })
     .fail(function() {
