@@ -277,6 +277,13 @@ img[data-src] {
   }
 }
 
+.btn-bigger {
+  display: block;
+}
+.btn-smaller {
+  display: none;
+}
+
 @media screen and (max-width: 667px) {
     body {
         overflow-x: hidden !important;
@@ -284,6 +291,12 @@ img[data-src] {
     .container {
         max-width: 100% !important;
         overflow-x: hidden !important;
+    }
+    .btn-bigger {
+      display: none;
+    }
+    .btn-smaller {
+      display: block;
     }
 }
 
