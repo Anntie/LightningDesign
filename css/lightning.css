@@ -292,6 +292,20 @@ img[data-src] {
     display: none;
   }
 
+  .xxs-display-inline {
+    display: inline;
+  }
+
+  .xxs-logo {
+    font-size: 1.5rem;
+  }
+
+  #logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: .2rem !important;
+  }
+
   .mr-2, .ml-2 {
     margin: 0 auto !important;
   }
@@ -302,5 +316,13 @@ img[data-src] {
 
   .cover-inner {
     padding: 0 !important;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
   }
 }
