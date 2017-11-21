@@ -20,7 +20,9 @@
     <meta charset="utf-8">
 		<title>Lightning Service</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<!--<link rel="shortcut icon" href="images/favicon.ico">-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+		<link rel="shortcut icon" href="/images/icons/favicon.ico">
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="../css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/style.css">
