@@ -218,7 +218,7 @@ $(document).ready(function() {
     };
     gtag('event', 'conversion', {
         'send_to': 'AW-830162992/H5zRCL-lxnkQsJDtiwM',
-        'value': 500.0,
+        'value': (price > 0) ? price : 500.0,
         'currency': 'UAH',
         'event_callback': callback
     });
