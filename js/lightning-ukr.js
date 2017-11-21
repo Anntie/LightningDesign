@@ -212,6 +212,19 @@ $(document).ready(function() {
     }
   });
 
+  function gtag_report_conversion() {
+    var callback = function () {
+      console.log("Conversion");
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-830162992/H5zRCL-lxnkQsJDtiwM',
+        'value': 500.0,
+        'currency': 'UAH',
+        'event_callback': callback
+    });
+    return false;
+  }
+
   $("#callback-form").submit(function(e) {
     e.preventDefault();
     let phone = $("#phonetocall").val();
@@ -238,7 +251,7 @@ $(document).ready(function() {
         }, 5000);
       } else {
         $("#success-cb").fadeIn();
-        dataLayer.push({'event': 'callback'});
+        gtag_report_conversion();
       }
     })
     .fail(function() {
@@ -304,7 +317,7 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $("#order-form").offset().top
         }, 400);
-        dataLayer.push({'event': 'order'});
+        gtag_report_conversion();
       }
     })
     .fail(function() {
