@@ -71,8 +71,28 @@
   background-color: #1E824C;
 }
 
-.nav-link {
+.nav-link-custom {
   color: #fff !important;
+  height: 48px;
+  display: inline;
+}
+
+.nav-link-custom:hover {
+  text-decoration: none;
+}
+
+#menu {
+  padding: 5px;
+}
+
+#menu-ul {
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.nav-text-custom {
+  line-height: 32px;
+  display: inline;
 }
 
 .delete-item {
@@ -298,15 +318,17 @@ img[data-src] {
     .btn-smaller {
       display: block;
     }
+
+    #logo {
+      display: none !important;
+    }
+
 }
 
 @media screen and (max-width: 362px) {
-  .xxs-display-none {
-    display: none;
-  }
 
-  .xxs-display-inline {
-    display: inline;
+  #menu-ul {
+    font-size: 1rem;
   }
 
   .xxs-logo {
@@ -314,9 +336,10 @@ img[data-src] {
   }
 
   #logo {
-    width: 2.5rem;
+    /*width: 2.5rem;
     height: 2.5rem;
-    margin-top: .2rem !important;
+    margin-top: .2rem !important;*/
+    display: none;
   }
 
   .mr-2, .ml-2 {
