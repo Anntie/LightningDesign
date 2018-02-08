@@ -304,7 +304,27 @@ img[data-src] {
   display: none;
 }
 
+.left-table {
+  border-right: 1px rgb(233, 236, 239) solid;
+}
+
+.bg-primary {
+  background-color: #4183D7 !important;
+  color: #fff;
+}
+
+.nav-tabs {
+  border-bottom: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .left-table {
+    border-right: 0;
+  }
+}
+
 @media screen and (max-width: 667px) {
+
     body {
         overflow-x: hidden !important;
     }
