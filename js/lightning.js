@@ -7,31 +7,11 @@ $(document).ready(function() {
     };
   });
 
-  // Safari bug fix
-  // get the iso time string formatted for usage in an input['type="datetime-local"']
-  var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-  var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0,-1);
-  var localISOTimeWithoutSeconds = localISOTime.slice(0,16);
-
-  // select the "datetime-local" input to set the default value on
-  var dtlInput = document.querySelector('input[type="datetime-local"]');
-
-  // set it and forget it ;)
-  dtlInput.value = localISOTime.slice(0,16);
-
-  $("#date").datetimepicker();
-
   $(".page-scroll").click(function(e) {
       e.preventDefault();
       $('html, body').animate({
           scrollTop: $($(this).attr('href')).offset().top - $(".navbar").height()
       }, 400);
-  });
-
-  let dateInput = 0;
-
-  $("#date").click(function() {
-    dateInput = 1;
   });
 
   const alertError = function() {
@@ -86,34 +66,17 @@ $(document).ready(function() {
   }
 
   const redraw = function() {
-    let html = "";
     let data = [];
     for (let [phone, item] of cart) {
       let size = item.length;
       const model = phone.slice(0, -1);
-      if (size > 0) {
-        html += '<tr class="table-info"><td style=\"background-color: #3498db; color: #fff;\" colspan="3">iPhone ' + model + '</td></tr>';
-      }
       while(size > 0) {
         let value = $(item[size - 1]).html();
-        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + value + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
-        value = value.replace(/\s/g, ' ');
         data.push({model: model, value: value});
         size--;
       }
     }
-    $("#cart-list").html(html);
     $('[data-toggle="tooltip"]').tooltip();
-
-    $(".delete-item").click(function() {
-      const tr = $(this).parent().parent();
-      const index = tr.data('index');
-      const phone = tr.data('phone');
-      const item = $(cart.get(phone)[index]);
-      item.trigger('click');
-      tr.remove();
-      redraw();
-    });
     $("#order-data").val(JSON.stringify(data));
     if (price > 0) {
       $(".gotocart").prop('disabled', false).removeClass('btn-secondary').addClass('btn-primary');
@@ -211,19 +174,6 @@ $(document).ready(function() {
       redraw();
     }
   });
-
-  function gtag_report_conversion() {
-    var callback = function () {
-      console.log("Conversion");
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-830162992/H5zRCL-lxnkQsJDtiwM',
-        'value': (price > 0) ? price : 500.0,
-        'currency': 'UAH',
-        'event_callback': callback
-    });
-    return false;
-  }
 
   $("#callback-form").submit(function(e) {
     e.preventDefault();

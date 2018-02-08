@@ -237,7 +237,54 @@ th {
 
 .service-modal .modal-backdrop {
   display: none;
-  opacity: 0; }
+  opacity: 0;
+}
+
+.service-modal .close-modal-extended {
+  cursor: pointer;
+  font-family: 'Droid Serif', "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  background-color: transparent; }
+  .service-modal .close-modal-extended:hover {
+    opacity: 0.3; }
+
+.arrows {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.goback-arrow-left {
+  height: 40px;
+  width: 1px;
+  background-color: #222222;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 0;
+  padding: 0;
+}
+
+.goback-arrow-right {
+  height: 40px;
+  width: 1px;
+  background-color: #222222;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-top: -12px;
+  padding: 0;
+}
+
+.arrow-text {
+  position: absolute;
+  top: 42px;
+  left: 55px;
+}
+
+.goback-text {
+  font-size: 1.4rem;
+}
 
 #phone, #date, #name, #adress, #date-mobile, #phonetocall {
   -webkit-border-top-left-radius: 0;

@@ -220,7 +220,7 @@
 				</div>
 			</div>
 		</section>
-    <section class="contact-2" id="order-section">
+    <!--<section class="contact-2" id="order-section">
 			<div class="container">
 				<div class="row contact-details">
 					<div class="col-sm-12 col-md-8 text-center">
@@ -280,7 +280,7 @@
 										  <tbody id="cart-list">
 										  </tbody>
 										</table>
-										<h4 class="price d-none"></h2>
+										<h4 class="price d-none"></h4>
 									</div>
 									<div class="col-md-12">
 										<button id="submit" type="submit" class="btn btn-secondary gotocart btn-lg mb-4" disabled>Отправить</button>
@@ -342,7 +342,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
     <footer class="footer-2">
 			<div class="container">
 				<div class="row">
@@ -488,8 +488,8 @@
 											</div>
 										</div>
 									</div>
-									<h4 class="price d-none"></h2>
-                  <button href="#order-section" class="btn btn-secondary page-scroll gotocart" data-dismiss="modal" disabled="true" type="button">Перейти к заказу</button>
+									<h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
                 </div>
               </div>
             </div>
@@ -584,8 +584,8 @@
 											</div>
 										</div>
 									</div>
-									<h4 class="price d-none"></h2>
-                  <button href="#order-section" class="btn btn-secondary page-scroll gotocart" data-dismiss="modal" disabled="true" type="button">Перейти к заказу</button>
+									<h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
                 </div>
               </div>
             </div>
@@ -680,8 +680,8 @@
 											</div>
 										</div>
 									</div>
-									<h4 class="price d-none"></h2>
-                  <button href="#order-section" class="btn btn-secondary page-scroll gotocart" data-dismiss="modal" disabled="true" type="button">Перейти к заказу</button>
+									<h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
                 </div>
               </div>
             </div>
@@ -860,8 +860,8 @@
 											</div>
 										</div>
 									</div>
-									<h4 class="price d-none"></h2>
-                  <button href="#order-section" class="btn btn-secondary page-scroll gotocart" data-dismiss="modal" disabled="true" type="button">Перейти к заказу</button>
+									<h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
                 </div>
               </div>
             </div>
@@ -1040,8 +1040,8 @@
 											</div>
 										</div>
 									</div>
-									<h4 class="price d-none"></h2>
-                  <button href="#order-section" class="btn btn-secondary page-scroll gotocart" data-dismiss="modal" disabled="true" type="button">Перейти к заказу</button>
+									<h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
                 </div>
               </div>
             </div>
@@ -1220,8 +1220,72 @@
 											</div>
 										</div>
 									</div>
-									<h4 class="price d-none"></h2>
-                  <button href="#order-section" class="btn btn-secondary page-scroll gotocart" data-dismiss="modal" disabled="true" type="button">Перейти к заказу</button>
+									<h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!-- Order modal -->
+    <div class="service-modal modal fade" id="orderModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal-extended" data-dismiss="modal">
+						<div class="arrows">
+							<div class="goback-arrow-left"></div><div class="goback-arrow-right"></div>
+						</div>
+						<div class="arrow-text">
+							<span class="goback-text">Вернуться к заказу</span>
+						</div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Как мы можем с Вами связаться?</h2>
+                  <p class="item-intro text-muted">Оставьте Ваши контакты и мы Вам перезвоним в кратчайшие сроки</p>
+									<form class="contact-form mt-4" id="order-form">
+										<div class="alert alert-success col-md-12" style="display: none;" id="success" role="alert">
+											Ваш заказ принят!
+										</div>
+										<div class="alert alert-danger col-md-12" style="display: none;" id="error" role="alert">
+											Произошла ошибка при размещении заказа. Попробуйте перезагрузить страницу.
+										</div>
+										<div class="alert alert-warning col-md-12" style="display: none;" id="warning" role="alert">
+										  Пожалуйста, заполните форму заказа.
+										</div>
+										<div class="container">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="input-group">
+														<span class="input-group-addon mb-4"><span class="far fa-user"></span></span>
+														<input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="input-group">
+													  <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
+														<input type="text" id="phone" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Номер телефона">
+													</div>
+												</div>
+												<br />
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<h4 class="price d-none"></h4>
+												</div>
+												<div class="col-md-12">
+													<button id="submit" type="submit" class="btn btn-primary btn-lg" disabled>Отправить</button>
+												</div>
+											</div>
+										</div>
+										<input type="hidden" id="order-data" />
+									</form>
                 </div>
               </div>
             </div>
