@@ -324,6 +324,10 @@ img[data-src] {
   opacity: 0;
 }
 
+.review {
+  border: 1px #ced6e0 solid;
+}
+
 @media (max-width: 767px) {
   #date {
     display: none;
