@@ -609,6 +609,22 @@ img[data-src] {
   height: auto;
 }
 
+.review-contacts {
+  background: #f1f2f6;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 180px) {
+  .review-contacts h5 {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    line-height: 1.25;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .card-columns {
     -webkit-column-count: 3;
