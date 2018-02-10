@@ -368,6 +368,67 @@ img[data-src] {
   border-bottom: 0 !important;
 }
 
+.deals {
+
+}
+
+.deal {
+  background-color: #34495e;
+}
+
+.img-deal {
+  width: 100%;
+  height: auto;
+}
+
+.deal-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 38%;
+  padding-left: 18%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-orange:hover {
+  background-color: rgba(230, 126, 34, .5);
+}
+
+.bg-dark-blue:hover {
+  background-color: rgba(39, 60, 117, .5);
+}
+
+.bg-blue:hover {
+  background-color: rgba(52, 152, 219, .5);
+}
+
+.bg-green:hover {
+  background-color: rgba(39, 174, 96, .5);
+}
+
+.deal-text-light, .deal-text-light p {
+  color: #fff;
+}
+
+.btn-deal {
+  display: block;
+  margin-left: 20%;
+  width: 130px;
+  background: transparent;
+  border: 3px #fff solid;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-deal:hover {
+  color: #2980b9;
+  background-color: #fff;
+  border: 3px #fff solid;
+}
+
 @media screen and (max-width: 768px) {
   .left-table {
     border-right: 0;

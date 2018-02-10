@@ -7,6 +7,10 @@ $(document).ready(function() {
     };
   });
 
+  $('[data-toggle="tooltip"]').tooltip().click(function(e) {
+    $(this).tooltip('toggle');
+  });
+
   $(".page-scroll").click(function(e) {
       e.preventDefault();
       $('html, body').animate({
