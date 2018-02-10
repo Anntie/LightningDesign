@@ -286,13 +286,13 @@ li.nav-item .btn-white {
       border: 0.15rem solid #dfe1e5; }
 
 .features-4 {
-  background: #2b2d34;
+  background: linear-gradient(to bottom right, #1E824C, #4183D7);
   padding: 2rem 0; }
   .features-4 h2 {
     margin-top: 2rem;
     color: #fff; }
   .features-4 p.lead {
-    color: #a0a0a0; }
+    color: #fff; }
   .features-4 .col-feature {
     padding-top: 2rem; }
     .features-4 .col-feature h4 {
@@ -305,7 +305,7 @@ li.nav-item .btn-white {
       width: 6rem;
       height: 6rem;
       background: none;
-      border: 0.15rem solid #696b6e;
+      border: 0.15rem solid #fff;
       color: #fff; }
 
 .content-1, .content-2, .content-4 {
