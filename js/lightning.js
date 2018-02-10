@@ -47,6 +47,9 @@ $(document).ready(function() {
   let iPhone6sPlus = [];
   let iPhone7 = [];
   let iPhone7Plus = [];
+  let iPhone8 = [];
+  let iPhone8Plus = [];
+  let iPhoneX = [];
   let price = 0;
 
   let cart = new Map();
@@ -59,6 +62,9 @@ $(document).ready(function() {
   cart.set("6s Plus_", iPhone6sPlus);
   cart.set("7_", iPhone7);
   cart.set("7 Plus_", iPhone7Plus);
+  cart.set("8_", iPhone8);
+  cart.set("8 Plus_", iPhone8Plus);
+  cart.set("X_", iPhoneX);
 
 
   const clearCart = function() {
@@ -72,6 +78,10 @@ $(document).ready(function() {
       $(this).val("");
     });
   }
+
+  $(".close-modal").click(function() {
+    clearCart();
+  });
 
   const redraw = function() {
     let data = [];
@@ -94,6 +104,8 @@ $(document).ready(function() {
   };
 
   $(".service-table tr").click(function() {
+    if ($(this).hasClass('tr-disabled')) return false;
+
     if ($(this).hasClass('bg-primary')) {
       $(this).removeClass('bg-primary');
       let cart;
@@ -124,6 +136,14 @@ $(document).ready(function() {
           break;
         case "iPhone7Plus-tbody":
           cart = iPhone7Plus;
+        case "iPhone8-tbody":
+          cart = iPhone8;
+          break;
+        case "iPhone8Plus-tbody":
+          cart = iPhone8Plus;
+          break;
+        case "iPhoneX-tbody":
+          cart = iPhoneX;
           break;
       }
       let index = cart.indexOf(this);
@@ -168,6 +188,15 @@ $(document).ready(function() {
           break;
         case "iPhone7Plus-tbody":
           iPhone7Plus.push(this);
+          break;
+        case "iPhone8-tbody":
+          iPhone8.push(this);
+          break;
+        case "iPhone8Plus-tbody":
+          iPhone8Plus.push(this);
+          break;
+        case "iPhoneX-tbody":
+          iPhoneX.push(this);
           break;
       }
 
