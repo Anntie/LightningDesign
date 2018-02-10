@@ -525,26 +525,6 @@ img[data-src] {
   }
 }
 
-/*@media screen and (min-width: 200px)  and (max-width: 464.98px) {
-  .deal-desc {
-    padding-top: 28%;
-    padding-left: 14%;
-  }
-
-  .deal-desc h3 {
-    font-size: 1.5rem;
-  }
-
-  .deal-desc p {
-    font-size: 0.8rem;
-  }
-
-  .deal-desc .btn {
-    font-size: 1.2rem !important;
-    width: 150px;
-  }
-}*/
-
 .bg-orange:hover {
   background-color: rgba(230, 126, 34, .5);
 }
@@ -590,6 +570,43 @@ img[data-src] {
 .card-columns {
   -webkit-column-count: 2;
   column-count: 2;
+}
+
+.accessories-text {
+  position: absolute;
+  top: 32%;
+  left: 6%;
+}
+
+.accessories-text > h3 {
+  color: #59a0d7;
+}
+
+.accessories-text > h3 > a:hover {
+  color: #59a0d7;
+}
+
+@media screen and (max-width: 575.98px) {
+  .accessories-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 180px) {
+  .accessories-text > h1 {
+    font-size: calc(32px + 20 * ((100vw - 320px) / 660));
+  }
+
+  .accessories-text > h3 {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 660));
+  }
+}
+
+
+.img-accessories {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 1200px) {
