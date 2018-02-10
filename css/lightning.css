@@ -5,6 +5,43 @@
   -webkit-font-smoothing: antialiased;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
+
+.btn:focus, .btn:active {
+   outline: none !important;
+   box-shadow: none !important;
+   border-color: transparent !important;
+}
+
+.title {
+  font-size: calc(28px + 24 * ( (100vw - 420px) / 480));
+}
+@media screen and (max-width: 420px) {
+  .title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .title {
+    font-size: 52px;
+  }
+}
+.body {
+  font-size: calc(14px + 6 * ( (100vw - 420px) / 480));
+}
+@media screen and (max-width: 420px) {
+  .body{
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .body{
+    font-size: 20px;
+  }
+}
+
 #logo {
   width: 3rem;
   height: 3rem;
@@ -421,12 +458,29 @@ img[data-src] {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .btn-deal:hover {
   color: #2980b9;
   background-color: #fff;
   border: 3px #fff solid;
+}
+
+.reviews {
+  background-color: #213040;
+}
+
+.card-columns {
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -453,6 +507,11 @@ img[data-src] {
 
     #logo {
       display: none !important;
+    }
+
+    .card-columns {
+      -webkit-column-count: 1;
+      column-count: 1;
     }
 
 }

@@ -7,6 +7,10 @@ $(document).ready(function() {
     };
   });
 
+  // Prevent <img> dragging
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
+
+  // Tooltip fix
   $('[data-toggle="tooltip"]').tooltip().click(function(e) {
     $(this).tooltip('toggle');
   });
