@@ -429,6 +429,122 @@ img[data-src] {
   transition: all 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 1080px) {
+  .deal-desc {
+    padding-top: 18%;
+    padding-left: 8%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .deal-desc h3 {
+    font-size: 1.3rem;
+  }
+
+  .deal-desc p {
+    font-size: .8rem;
+  }
+
+  .deal-desc .btn {
+    font-size: .8rem !important;
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .deal-desc {
+    padding-top: 6%;
+    padding-left: 6%;
+  }
+}
+
+@media screen and (min-width: 465px)  and (max-width: 575.98px) {
+  .deal-desc {
+    padding-top: 28%;
+    padding-left: 14%;
+  }
+
+  .deal-desc h3 {
+    font-size: 3rem;
+  }
+
+  .deal-desc p {
+    font-size: 1.2rem;
+  }
+
+  .deal-desc .btn {
+    font-size: 1.2rem !important;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 464.98px) {
+  .deal-desc {
+    padding-top: 20%;
+    padding-left: 10%;
+  }
+
+  .deal-desc h3 {
+    font-size: 2rem;
+  }
+
+  .deal-desc p {
+    font-size: .9rem;
+  }
+
+  .deal-desc .btn {
+    font-size: 1rem !important;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .deal-desc {
+    padding-top: 10%;
+    padding-left: 6%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .deal-desc {
+    padding-top: 10%;
+    padding-left: 6%;
+  }
+
+  .deal-desc h3 {
+    font-size: 1.65rem;
+  }
+
+  .deal-desc p {
+    font-size: .8rem;
+  }
+
+  .deal-desc .btn {
+    font-size: .8rem !important;
+    width: 120px;
+  }
+}
+
+/*@media screen and (min-width: 200px)  and (max-width: 464.98px) {
+  .deal-desc {
+    padding-top: 28%;
+    padding-left: 14%;
+  }
+
+  .deal-desc h3 {
+    font-size: 1.5rem;
+  }
+
+  .deal-desc p {
+    font-size: 0.8rem;
+  }
+
+  .deal-desc .btn {
+    font-size: 1.2rem !important;
+    width: 150px;
+  }
+}*/
+
 .bg-orange:hover {
   background-color: rgba(230, 126, 34, .5);
 }
