@@ -525,6 +525,43 @@ img[data-src] {
   }
 }
 
+.steps {
+  background: linear-gradient(#5900b2, transparent), linear-gradient(200deg, #d047d1, #ff3838, #fff200);
+  color: #fff;
+}
+
+.circle-empty {
+  width: 16px;
+  height: 16px;
+  border: 2px #fff solid;
+  display: block;
+  vertical-align: middle;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.circle-full {
+  width: 16px;
+  height: 16px;
+  border: 2px #fff solid;
+  background-color: #fff;
+  display: block;
+  vertical-align: middle;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.dotted-line {
+  width: 42%;
+  height: 1px;
+  border-top: .3rem #fff dotted;
+  margin-top: 5px;
+}
+
+.dotted-line.float-left {
+  margin-left: 4px;
+}
+
 .bg-orange:hover {
   background-color: rgba(230, 126, 34, .5);
 }
