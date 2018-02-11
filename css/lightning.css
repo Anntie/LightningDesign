@@ -530,6 +530,38 @@ img[data-src] {
   color: #fff;
 }
 
+.steps-text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767.98px) {
+  .steps-number {
+    font-size: 3.5rem;
+    border: 2px #fff solid;
+    width: 4rem;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+
+  }
+
+  .steps-text {
+    font-size: 1.3rem;
+    margin-left: .8rem;
+  }
+
+  .steps-col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 180px) and (max-width: 480px) {
+  
+}
+
+
 .circle-empty {
   width: 16px;
   height: 16px;
