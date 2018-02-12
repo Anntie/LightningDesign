@@ -15,6 +15,36 @@ $(document).ready(function() {
     $(this).tooltip('toggle');
   });
 
+  // Modal fix
+  $(document).on({
+    'show.bs.modal': function() {
+      var zIndex = 1040 + (10 * $('.modal:visible').length);
+      $(this).css('z-index', zIndex);
+      setTimeout(function() {
+        $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+      }, 0);
+    },
+    'hidden.bs.modal': function() {
+      if ($('.modal:visible').length > 0) {
+        // restore the modal-open class to the body element, so that scrolling works
+        // properly after de-stacking a modal.
+        setTimeout(function() {
+          $(document.body).addClass('modal-open');
+        }, 0);
+      }
+    }
+  }, '.modal');
+
+  $('.modal').on('shown.bs.modal', function (e) {
+    $('html').addClass('freezePage');
+    $('body').addClass('freezePage');
+  });
+  $('.modal').on('hidden.bs.modal', function (e) {
+    $('html').removeClass('freezePage');
+    $('body').removeClass('freezePage');
+  });
+  // End of modal fix
+
   $(".page-scroll").click(function(e) {
       e.preventDefault();
       $('html, body').animate({

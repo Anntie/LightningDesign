@@ -9,6 +9,12 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: default;
 }
 
+.freezePage{
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
 .btn:focus, .btn:active {
    outline: none !important;
    box-shadow: none !important;
