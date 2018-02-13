@@ -585,7 +585,7 @@ img[data-src] {
   background-color: rgba(52, 152, 219, .5);
 }
 
-.bg-green:hover {
+.bg-green-dark:hover {
   background-color: rgba(39, 174, 96, .5);
 }
 
