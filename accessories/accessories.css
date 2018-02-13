@@ -78,3 +78,25 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 362px) {
+
+  .xxs-logo {
+    font-size: 1.5rem;
+  }
+
+}
+
+.bg-green {
+  background-color: #1e814b !important;
+}
+
+.nav-link-custom {
+  color: #fff !important;
+  height: 48px;
+  display: inline;
+}
+
+.nav-link-custom:hover {
+  text-decoration: none;
+}
