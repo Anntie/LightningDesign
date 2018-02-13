@@ -1,3 +1,8 @@
+* {
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 .bg-grey {
   background: #f2f2f2;
   border: 3px #fff solid;
@@ -98,6 +103,22 @@
   padding-left: .65rem;
 }
 
+.xxs-logo {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-nav {
+    font-size: 1.2rem;
+  }
+
+  .xxs-logo {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 991.98px) {
   .navbar-nav {
     display: -ms-flexbox;
@@ -117,4 +138,17 @@
 
 .nav-link-custom:hover {
   text-decoration: none;
+}
+
+@media screen and (max-width: 510px) {
+  .navbar-nav {
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 370px) {
+  .navbar-nav {
+    font-size: .8rem;
+  }
 }
