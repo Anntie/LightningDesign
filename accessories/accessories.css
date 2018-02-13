@@ -95,6 +95,24 @@
   color: #fff !important;
   height: 48px;
   display: inline;
+  padding-left: .65rem;
+}
+
+@media screen and (max-width: 991.98px) {
+  .navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+
+  .nav-item {
+    padding-right: .35rem;
+  }
+
+  .nav-link-custom {
+    padding-left: .3rem;
+  }
 }
 
 .nav-link-custom:hover {
