@@ -31,9 +31,6 @@
       <a class="navbar-brand" href="./"><img src="images/logo-2.svg" id="logo" style="margin-left: 1rem; width: 32px; height: 32px; margin-right: 4px;" class="d-inline-block align-top" alt="lightning"><span class="xxs-logo d-md-inline d-none">lightning</span><span class="xxs-logo d-lg-inline d-none" style="margin-left: 2px; color: #353b48;">service</span></a>
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link active" href="accessories/">Магазин</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link active page-scroll d-none d-md-block" href="#about-section">О нас</a>
 				</li>
 				<li class="nav-item ">
@@ -41,6 +38,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link active page-scroll d-none d-md-block" href="#features-section">Преимущества</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="accessories/">Магазин</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto pull-xs-right justify-content-end">
@@ -276,7 +276,7 @@
 						<div class="deal-desc bg-dark-blue deal-text-light">
 							<h3>Скидки на ремонт</h3>
 							<p>Лайк если репост, репост если лайк</p>
-							<a href="#" class="btn btn-light btn-deal">Подробнее</a>
+							<a href="#" class="btn btn-light btn-deal" data-toggle="modal" data-target="#deal1Modal">Подробнее</a>
 						</div>
 					</div>
 					<div class="col-12 col-sm-4 p-0 deal">
@@ -284,7 +284,7 @@
 						<div class="deal-desc bg-green-dark deal-text-light">
 							<h3>Скидки на ремонт</h3>
 							<p>Лайк если репост, репост если лайк</p>
-							<a href="#" class="btn btn-light btn-deal">Подробнее</a>
+							<a href="#" class="btn btn-light btn-deal" data-toggle="modal" data-target="#deal2Modal">Подробнее</a>
 						</div>
 					</div>
 					<div class="col-12 col-sm-4 p-0 deal">
@@ -292,7 +292,7 @@
 						<div class="deal-desc bg-blue deal-text-light">
 							<h3>Скидки на ремонт</h3>
 							<p>Лайк если репост, репост если лайк</p>
-							<a href="#" class="btn btn-light btn-deal">Подробнее</a>
+							<a href="#" class="btn btn-light btn-deal"  data-toggle="modal" data-target="#deal3Modal">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -519,7 +519,7 @@
 		<!-- Modals -->
 
 		<!-- Callback -->
-		<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+		<div class="modal fade modal-small" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-md" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -1691,6 +1691,75 @@
         </div>
       </div>
     </div>
+
+		<!-- Deal 1 -->
+		<div class="modal fade modal-small" id="deal1Modal" tabindex="-1" role="dialog" aria-labelledby="deal1ModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-md" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="helpModalLabel">Deal 1 desc</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+						Deal 1 content
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Deal 2 -->
+		<div class="modal fade modal-small" id="deal2Modal" tabindex="-1" role="dialog" aria-labelledby="deal2ModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-md" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="helpModalLabel">Deal 2 desc</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+						Deal 2 content
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Deal 2 -->
+		<div class="modal fade modal-small" id="deal2Modal" tabindex="-1" role="dialog" aria-labelledby="deal2ModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-md" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="helpModalLabel">Deal 2 desc</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+						Deal 2 content
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Deal 3 -->
+		<div class="modal fade modal-small" id="deal3Modal" tabindex="-1" role="dialog" aria-labelledby="deal3ModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-md" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="helpModalLabel">Deal 3 desc</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+						Deal 2 content
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

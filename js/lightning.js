@@ -36,12 +36,16 @@ $(document).ready(function() {
   }, '.modal');
 
   $('.modal').on('shown.bs.modal', function (e) {
-    $('html').addClass('freezePage');
-    $('body').addClass('freezePage');
+    if(!$(this).hasClass('modal-small')) {
+      $('html').addClass('freezePage');
+      $('body').addClass('freezePage');
+    }
   });
   $('.modal').on('hidden.bs.modal', function (e) {
-    $('html').removeClass('freezePage');
-    $('body').removeClass('freezePage');
+    if(!$(this).hasClass('modal-small')) {
+      $('html').removeClass('freezePage');
+      $('body').removeClass('freezePage');
+    }
   });
   // End of modal fix
 
