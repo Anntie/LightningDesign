@@ -3,6 +3,16 @@
   -webkit-font-smoothing: antialiased;
 }
 
+a:focus {
+  outline: none;
+}
+
+.freezePage{
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
 .bg-grey {
   background: #f2f2f2;
   border: 3px #fff solid;
@@ -23,6 +33,7 @@
   width: 100% !important;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .item h5, h6 {
@@ -151,4 +162,246 @@
   .navbar-nav {
     font-size: .8rem;
   }
+}
+
+.item-modal .modal-dialog {
+  max-width: none;
+  height: 100%;
+  margin: 0; }
+
+.item-modal .modal-content {
+  min-height: 100%;
+  padding: 100px 0;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  background-color: #fff;
+  box-shadow: none; }
+  .item-modal .modal-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px; }
+  .item-modal .modal-content p {
+    margin-bottom: 30px; }
+  .item-modal .modal-content p.item-intro {
+    font-size: 16px;
+    font-style: italic;
+    margin: 20px 0 30px;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  .item-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px; }
+  .item-modal .modal-content img {
+    margin-bottom: 30px; }
+  .item-modal .modal-content button {
+    cursor: pointer; }
+
+.item-modal .close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  background-color: transparent; }
+  .item-modal .close-modal:hover {
+    opacity: 0.3; }
+  .item-modal .close-modal .lr {
+    /* Safari and Chrome */
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #222222; }
+    .item-modal .close-modal .lr .rl {
+      /* Safari and Chrome */
+      z-index: 1052;
+      width: 1px;
+      height: 75px;
+      /* IE 9 */
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+      background-color: #222222; }
+
+.item-modal .modal-backdrop {
+  display: none;
+  opacity: 0;
+}
+
+.item-modal .close-modal-extended {
+  cursor: pointer;
+  font-family: 'Droid Serif', "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  background-color: transparent; }
+  .item-modal .close-modal-extended:hover {
+    opacity: 0.3; }
+
+.arrows {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.goback-arrow-left {
+  height: 40px;
+  width: 1px;
+  background-color: #222222;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 0;
+  padding: 0;
+}
+
+.goback-arrow-right {
+  height: 40px;
+  width: 1px;
+  background-color: #222222;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-top: -12px;
+  padding: 0;
+}
+
+.arrow-text {
+  position: absolute;
+  top: 42px;
+  left: 55px;
+}
+
+.goback-text {
+  font-size: 1.4rem;
+}
+
+/* Select */
+
+.ng-binding {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.md-select {
+  /*Demo css do not add to your project*/
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*--*/
+  display: block;
+  margin: 10px 0 8px 0;
+  padding-bottom: 2px;
+  /*  position: relative;*/
+  min-width: 300px;
+}
+.md-select *, .md-select :after, .md-select :before {
+  box-sizing: border-box;
+}
+.md-select [type=button] {
+  min-width: 300px;
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-width: 0 0 1px 0;
+  color: rgba(0, 0, 0, 0.73);
+  cursor: pointer;
+  display: block;
+  line-height: 48px;
+  padding: 2px 0 1px 16px;
+  position: relative;
+  text-align: left;
+  text-shadow: none;
+  width: 100%;
+  z-index: 1;
+  outline: none;
+  overflow: hidden;
+}
+.md-select [type=button]:focus, .md-select [type=button]:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.md-select [type=button]:after {
+  content: '\25be';
+  float: right;
+  padding-right: 16px;
+}
+.md-select ul[role=listbox] {
+  background-color: white;
+  cursor: default;
+  list-style: none;
+  line-height: 26px;
+  overflow: hidden;
+  margin: 0;
+  max-height: 0;
+  position: absolute;
+  padding: 0;
+  transform: translateY(-50%);
+  transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+}
+.md-select ul[role=listbox] li {
+  height: auto;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  outline: none;
+  overflow: hidden;
+}
+.md-select ul[role=listbox] li:focus, .md-select ul[role=listbox] li:hover, .md-select ul[role=listbox] li.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+.md-select.active ul {
+  max-height: 200px;
+  overflow: auto;
+  padding: 8px 0 16px 0px;
+  z-index: 2;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Cases */
+
+.case-image {
+  width: 100%;
+  height: auto;
+}
+
+.case-color-select {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.case-color {
+  width: 2rem;
+  height: 2rem;
+  background-color: #000;
+  margin: 0 auto;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.case-color-red {
+  background-color: #c53338;
+}
+
+.case-color-blue {
+  background-color: #304666;
+}
+
+.case-color-black {
+  background-color: #2a2b2d;
+}
+
+.case-color-white {
+  background-color: #fff;
+}
+
+.case-image-li {
+  transition: all 0.2s ease-in-out;
 }

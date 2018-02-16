@@ -91,7 +91,7 @@
 
 					<div class="col-md-4 bg-grey item text-center">
 						<div class="item-content">
-							<a href="#">
+							<a href="#siliconeCasesModal" data-toggle="modal">
 								<img src="silicone_cases-magic.png" alt="Silicone cases" class="item-img" />
 								<h5 class="mb-0">iPhone Silicone Case</h5>
 							</a>
@@ -104,7 +104,7 @@
 				<div class="row row-flex">
 					<div class="col-md-6 bg-grey item text-center">
 						<div class="item-content">
-							<a href="#">
+							<a href="#airPodsModal" data-toggle="modal">
 								<img src="airpods.jpg" alt="Наушники AirPods" class="item-img" />
 								<h5 class="mb-0">Наушники AirPods</h5>
 							</a>
@@ -129,7 +129,7 @@
 
 					<div class="col-md-3 bg-grey item text-center">
 						<div class="item-content">
-							<a href="#">
+							<a href="#lightningModal" data-toggle="modal">
 								<img src="MD818.jpeg" alt="Кабель Lightning" class="item-img" />
 								<h5 class="mb-0">Кабель Lightning</h5>
 							</a>
@@ -140,7 +140,7 @@
 
 					<div class="col-md-3 bg-grey item text-center">
 						<div class="item-content">
-							<a href="#">
+							<a href="#adapterModal" data-toggle="modal">
 								<img src="adapter.jpg" alt="Адаптер питания iPhone" class="item-img" />
 								<h5 class="mb-0">Адаптер питания iPhone</h5>
 							</a>
@@ -150,7 +150,7 @@
 					</div>
 					<div class="col-md-3 bg-grey item text-center">
 						<div class="item-content">
-							<a href="#">
+							<a href="#earPodsModal" data-toggle="modal">
 								<img src="earpods.jpg" alt="Наушники EarPods" class="item-img" />
 								<h5 class="mb-0">Наушники EarPods</h5>
 							</a>
@@ -160,7 +160,7 @@
 					</div>
 					<div class="col-md-3 bg-grey item text-center">
 						<div class="item-content">
-							<a href="#">
+							<a href="#adapterModal" data-toggle="modal">
 								<img src="adapter.jpg" alt="Адаптер питания iPhone" class="item-img" />
 								<h5 class="mb-0">Адаптер питания iPhone</h5>
 							</a>
@@ -171,6 +171,243 @@
         </div>
       </div>
     </section>
+
+		<!-- Silicone cases -->
+    <div class="item-modal modal fade" id="siliconeCasesModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>iPhone Silicone Case</h2>
+									<a href="#" id="silicone-goback" class="d-none">Назад к выбору</a>
+									<div class="container" id="siliconeChooser">
+
+										<div class="md-select">
+											<p class="item-intro text-muted">Выберите желаемую модель iPhone</p>
+										  <label for="ul-id"><button type="button" class="ng-binding">Выберите модель</button></label>
+										  <ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="silicone_iphone_5" name="ul-id">
+										    <li role="option" id="silicone_iphone_5" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true" data-case="silicone" data-model="iPhone5">iPhone 5 / 5S / 5C / SE</li>
+												<li role="option" id="silicone_iphone_6" class="ng-binding ng-scope" tabindex="-1" aria-selected="false" data-case="silicone" data-model="iPhone6">iPhone 6 / 6s</li>
+												<li role="option" id="silicone_iphone_6splus" class="ng-binding ng-scope" tabindex="-1" aria-selected="false" data-case="silicone" data-model="iPhone6Plus">iPhone 6 Plus / 6s Plus</li>
+												<li role="option" id="silicone_iphone_7" class="ng-binding ng-scope" tabindex="-1" aria-selected="false" data-case="silicone" data-model="iPhone7">iPhone 7 / 8</li>
+												<li role="option" id="silicone_iphone_8plus" class="ng-binding ng-scope" tabindex="-1" aria-selected="false" data-case="silicone" data-model="iPhone7Plus">iPhone 7 Plus / 8 Plus</li>
+												<li role="option" id="silicone_iphone_x" class="ng-binding ng-scope" tabindex="-1" aria-selected="false" data-case="silicone" data-model="iPhoneX">iPhone X</li>
+										  </ul>
+
+										</div>
+
+									</div>
+									<div class="container p-0 pt-5 d-none" id="siliconeWindow">
+										<div class="row no-gutters">
+											<div class="col-sm-2 bg-grey pt-2">
+												<h5>Выберите цвет</h5>
+												<ul class="case-color-select text-center">
+													<li class="rounded-circle case-color case-color-red" data-case="silicone" data-case-color="red"></li>
+													<li class="rounded-circle case-color case-color-blue" data-case="silicone" data-case-color="blue"></li>
+													<li class="rounded-circle case-color case-color-black" data-case="silicone" data-case-color="black"></li>
+													<li class="rounded-circle case-color case-color-white" data-case="silicone" data-case-color="white"></li>
+												</ul>
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7Plus_red">
+												<img class="case-image" src="cases/iphone7plus_red.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7Plus_blue">
+												<img class="case-image" src="cases/iphone7plus_blue.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7Plus_black">
+												<img class="case-image" src="cases/iphone7plus_black.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7Plus_white">
+												<img class="case-image" src="cases/iphone7plus_white.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7_red">
+												<img class="case-image" src="cases/iphone7_red.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7_blue">
+												<img class="case-image" src="cases/iphone7_blue.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7_black">
+												<img class="case-image" src="cases/iphone7_black.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone7_white">
+												<img class="case-image" src="cases/iphone7_white.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone6Plus_red">
+												<img class="case-image" src="cases/iphone6plus_red.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone6Plus_blue">
+												<img class="case-image" src="cases/iphone6plus_blue.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone6Plus_black">
+												<img class="case-image" src="cases/iphone6plus_black.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhone6Plus_white">
+												<img class="case-image" src="cases/iphone6plus_white.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhoneX_red">
+												<img class="case-image" src="cases/iphonex_red.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhoneX_blue">
+												<img class="case-image" src="cases/iphonex_blue.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhoneX_black">
+												<img class="case-image" src="cases/iphonex_black.jpeg" alt />
+											</div>
+											<div class="case-image-li col-sm-10 bg-grey d-none" id="iPhoneX_white">
+												<img class="case-image" src="cases/iphonex_white.jpeg" alt />
+											</div>
+										</div>
+										<h4 class="price d-none"></h4>
+	                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+									</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!-- AirPods -->
+    <div class="item-modal modal fade" id="airPodsModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>AirPods</h2>
+									<p class="item-intro text-muted" style="font-size: 1.5rem;">₴5599</p>
+									<button href="#" class="btn btn-primary" type="button">+</button>
+									<div class="container p-0 pt-5">
+										<div class="row justify-content-center no-gutters">
+											<div class="col-10">
+												<img class="item-img" src="MMEF2.jpeg" alt />
+											</div>
+										</div>
+										<h4 class="price d-none"></h4>
+									</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!-- Lightning -->
+    <div class="item-modal modal fade" id="lightningModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Кабель Lightning</h2>
+									<p class="item-intro text-muted" style="font-size: 1.5rem;">₴5599</p>
+									<button href="#" class="btn btn-primary" type="button">+</button>
+									<div class="container p-0 pt-5">
+										<div class="row justify-content-center no-gutters">
+											<div class="col-10">
+												<img class="item-img" src="MD818.jpg" alt />
+											</div>
+										</div>
+										<h4 class="price d-none"></h4>
+									</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!-- Adapter -->
+    <div class="item-modal modal fade" id="adapterModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Адаптер питания iPhone</h2>
+									<p class="item-intro text-muted" style="font-size: 1.5rem;">₴5599</p>
+									<button href="#" class="btn btn-primary" type="button">+</button>
+									<div class="container p-0 pt-5">
+										<div class="row justify-content-center no-gutters">
+											<div class="col-10">
+												<img class="item-img" src="MD813.jpeg" alt />
+											</div>
+										</div>
+										<h4 class="price d-none"></h4>
+									</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!-- EarPods -->
+    <div class="item-modal modal fade" id="earPodsModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>EarPods</h2>
+									<p class="item-intro text-muted" style="font-size: 1.5rem;">₴5599</p>
+									<button href="#" class="btn btn-primary" type="button">+</button>
+									<div class="container p-0 pt-5">
+										<div class="row justify-content-center no-gutters">
+											<div class="col-10">
+												<img class="item-img" src="APLMMTN2AMA_gall2.jpg" alt />
+											</div>
+										</div>
+										<h4 class="price d-none"></h4>
+									</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
