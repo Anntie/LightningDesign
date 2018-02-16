@@ -296,29 +296,20 @@ $(document).ready(function() {
     redraw();
     const name = $("#name").val();
     const phone = $("#phone").val();
-    const adress = $("#adress").val();
-    const order  = $("#order-data").val();
+    const order = $("#order-data").val();
 
-    let date;
-    const dateDesktop = $("#date").val();
-    const dateMobile = $("#date-mobile").val();
-
-    if ((!dateDesktop && !dateMobile) || !name || !phone || !order || !adress) {
+    if (!name || !phone || !order) {
       $("#warning").fadeIn();
       setTimeout(function() {
         $("#warning").fadeOut();
       }, 5000);
       return false;
-    } else {
-      date = (dateInput === 0) ? dateMobile : dateDesktop;
     }
 
     const data = {
       'name': name,
       'phone': phone,
-      'data': order,
-      'adress': adress,
-      'date': date
+      'data': order
     };
 
     $.ajax({
@@ -335,10 +326,11 @@ $(document).ready(function() {
         clearCart();
         clearForm();
 
-        $('html, body').animate({
-            scrollTop: $("#order-form").offset().top
-        }, 400);
-        gtag_report_conversion();
+        setTimeout(function() {
+          $(".modal").each(function() {
+            $(this).modal('hide');
+          });
+        }, 2500);
       }
     })
     .fail(function() {

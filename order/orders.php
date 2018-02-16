@@ -19,14 +19,12 @@
     $data = json_decode($row["data"]);
     foreach ($data as $item) {
       $item = (array) $item;
-      $client = "<tr data-id=\"" . $row["id"] . "\" class=\"table-info text-left\"><td>" . $row['name'] . "</td><td>" . $row['phone'] . "</td><td style=\"right 0;\" colspan=\"2\"></td><td><span class=\"btn btn-sm btn-danger delete-item pull-right\"><i class=\"fa fa-times fa-1x\"></i></span></td></tr>";
+      $client = "<tr data-id=\"" . $row["id"] . "\" class=\"table-info text-left\"><td>" . $row['name'] . "</td><td>" . $row['phone'] . "</td><td><span class=\"btn btn-sm btn-danger delete-item pull-right\"><i class=\"fa fa-times fa-1x\"></i></span></td></tr>";
       $entry = array(
         "id" => $row["id"],
         "name" => $row["name"],
         "model" => $item["model"],
         "phone" => $row["phone"],
-        "adress" => $row["adress"],
-        "date" => $row["date"],
         "data" => $item["value"]
       );
       if (empty($set[$client])) {
@@ -76,11 +74,9 @@
     <table class="table table-striped" id="orders-table">
       <thead class="thead-inverse">
         <tr>
-          <th>Дата</th>
           <th>Модель</th>
           <th>Название услуги</th>
           <th>Цена</th>
-          <th>Адрес</th>
         </tr>
       </thead>
       <tbody id="orders-list" class="text-center">
@@ -88,7 +84,7 @@
           foreach ($set as $client => $orders) {
             echo $client;
             foreach ($orders as $order) {
-              echo "<tr data-id=\"" . $order["id"] . "\"><td>" . $order["date"] . "</td><td>" . $order["model"] . "</td>" . $order["data"] . "<td>" . $order["adress"] . "</td></tr>";
+              echo "<tr data-id=\"" . $order["id"] . "\"><td>" . $order["model"] . "</td>" . $order["data"] . "</tr>";
             }
           }
         ?>
