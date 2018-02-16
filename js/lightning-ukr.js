@@ -7,31 +7,53 @@ $(document).ready(function() {
     };
   });
 
-  // Safari bug fix
-  // get the iso time string formatted for usage in an input['type="datetime-local"']
-  var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-  var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0,-1);
-  var localISOTimeWithoutSeconds = localISOTime.slice(0,16);
+  // Prevent <img> dragging
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
 
-  // select the "datetime-local" input to set the default value on
-  var dtlInput = document.querySelector('input[type="datetime-local"]');
+  // Tooltip fix
+  $('[data-toggle="tooltip"]').tooltip().click(function(e) {
+    $(this).tooltip('toggle');
+  });
 
-  // set it and forget it ;)
-  dtlInput.value = localISOTime.slice(0,16);
+  // Modal fix
+  $(document).on({
+    'show.bs.modal': function() {
+      var zIndex = 1040 + (10 * $('.modal:visible').length);
+      $(this).css('z-index', zIndex);
+      setTimeout(function() {
+        $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+      }, 0);
+    },
+    'hidden.bs.modal': function() {
+      if ($('.modal:visible').length > 0) {
+        // restore the modal-open class to the body element, so that scrolling works
+        // properly after de-stacking a modal.
+        setTimeout(function() {
+          $(document.body).addClass('modal-open');
+        }, 0);
+      }
+    }
+  }, '.modal');
 
-  $("#date").datetimepicker();
+  $('.modal').on('shown.bs.modal', function (e) {
+    if(!$(this).hasClass('modal-small')) {
+      $('html').addClass('freezePage');
+      $('body').addClass('freezePage');
+    }
+  });
+  $('.modal').on('hidden.bs.modal', function (e) {
+    if(!$(this).hasClass('modal-small')) {
+      $('html').removeClass('freezePage');
+      $('body').removeClass('freezePage');
+    }
+  });
+  // End of modal fix
 
   $(".page-scroll").click(function(e) {
       e.preventDefault();
       $('html, body').animate({
           scrollTop: $($(this).attr('href')).offset().top - $(".navbar").height()
       }, 400);
-  });
-
-  let dateInput = 0;
-
-  $("#date").click(function() {
-    dateInput = 1;
   });
 
   const alertError = function() {
@@ -59,6 +81,9 @@ $(document).ready(function() {
   let iPhone6sPlus = [];
   let iPhone7 = [];
   let iPhone7Plus = [];
+  let iPhone8 = [];
+  let iPhone8Plus = [];
+  let iPhoneX = [];
   let price = 0;
 
   let cart = new Map();
@@ -71,6 +96,9 @@ $(document).ready(function() {
   cart.set("6s Plus_", iPhone6sPlus);
   cart.set("7_", iPhone7);
   cart.set("7 Plus_", iPhone7Plus);
+  cart.set("8_", iPhone8);
+  cart.set("8 Plus_", iPhone8Plus);
+  cart.set("X_", iPhoneX);
 
 
   const clearCart = function() {
@@ -85,35 +113,22 @@ $(document).ready(function() {
     });
   }
 
+  $(".close-modal").click(function() {
+    clearCart();
+  });
+
   const redraw = function() {
-    let html = "";
     let data = [];
     for (let [phone, item] of cart) {
       let size = item.length;
       const model = phone.slice(0, -1);
-      if (size > 0) {
-        html += '<tr class="table-info"><td style=\"background-color: #3498db; color: #fff;\" colspan="3">iPhone ' + model + '</td></tr>';
-      }
       while(size > 0) {
         let value = $(item[size - 1]).html();
-        html += "<tr data-phone=\"" + phone + "\" data-index=\"" + (size - 1) + "\">" + value + '<td width="5% !important"><span class="btn btn-sm btn-danger delete-item"><i class="fa fa-times fa-1x"></i></span></td>' + "</tr>";
-        value = value.replace(/\s/g, ' ');
         data.push({model: model, value: value});
         size--;
       }
     }
-    $("#cart-list").html(html);
     $('[data-toggle="tooltip"]').tooltip();
-
-    $(".delete-item").click(function() {
-      const tr = $(this).parent().parent();
-      const index = tr.data('index');
-      const phone = tr.data('phone');
-      const item = $(cart.get(phone)[index]);
-      item.trigger('click');
-      tr.remove();
-      redraw();
-    });
     $("#order-data").val(JSON.stringify(data));
     if (price > 0) {
       $(".gotocart").prop('disabled', false).removeClass('btn-secondary').addClass('btn-primary');
@@ -123,6 +138,8 @@ $(document).ready(function() {
   };
 
   $(".service-table tr").click(function() {
+    if ($(this).hasClass('tr-disabled')) return false;
+
     if ($(this).hasClass('bg-primary')) {
       $(this).removeClass('bg-primary');
       let cart;
@@ -153,6 +170,14 @@ $(document).ready(function() {
           break;
         case "iPhone7Plus-tbody":
           cart = iPhone7Plus;
+        case "iPhone8-tbody":
+          cart = iPhone8;
+          break;
+        case "iPhone8Plus-tbody":
+          cart = iPhone8Plus;
+          break;
+        case "iPhoneX-tbody":
+          cart = iPhoneX;
           break;
       }
       let index = cart.indexOf(this);
@@ -198,6 +223,15 @@ $(document).ready(function() {
         case "iPhone7Plus-tbody":
           iPhone7Plus.push(this);
           break;
+        case "iPhone8-tbody":
+          iPhone8.push(this);
+          break;
+        case "iPhone8Plus-tbody":
+          iPhone8Plus.push(this);
+          break;
+        case "iPhoneX-tbody":
+          iPhoneX.push(this);
+          break;
       }
 
       price += parseInt($(this).children('td').eq(1).html().substr(1));
@@ -211,19 +245,6 @@ $(document).ready(function() {
       redraw();
     }
   });
-
-  function gtag_report_conversion() {
-    var callback = function () {
-      console.log("Conversion");
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-830162992/H5zRCL-lxnkQsJDtiwM',
-        'value': (price > 0) ? price : 500.0,
-        'currency': 'UAH',
-        'event_callback': callback
-    });
-    return false;
-  }
 
   $("#callback-form").submit(function(e) {
     e.preventDefault();
@@ -275,29 +296,20 @@ $(document).ready(function() {
     redraw();
     const name = $("#name").val();
     const phone = $("#phone").val();
-    const adress = $("#adress").val();
-    const order  = $("#order-data").val();
+    const order = $("#order-data").val();
 
-    let date;
-    const dateDesktop = $("#date").val();
-    const dateMobile = $("#date-mobile").val();
-
-    if ((!dateDesktop && !dateMobile) || !name || !phone || !order || !adress) {
+    if (!name || !phone || !order) {
       $("#warning").fadeIn();
       setTimeout(function() {
         $("#warning").fadeOut();
       }, 5000);
       return false;
-    } else {
-      date = (dateInput === 0) ? dateMobile : dateDesktop;
     }
 
     const data = {
       'name': name,
       'phone': phone,
-      'data': order,
-      'adress': adress,
-      'date': date
+      'data': order
     };
 
     $.ajax({
@@ -314,10 +326,11 @@ $(document).ready(function() {
         clearCart();
         clearForm();
 
-        $('html, body').animate({
-            scrollTop: $("#order-form").offset().top
-        }, 400);
-        gtag_report_conversion();
+        setTimeout(function() {
+          $(".modal").each(function() {
+            $(this).modal('hide');
+          });
+        }, 2500);
       }
     })
     .fail(function() {
