@@ -23,6 +23,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightning.css">
+    <link rel="stylesheet" href="css/callback.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108636989-1"></script>
@@ -540,9 +541,9 @@
             </button>
           </div>
           <div class="modal-body">
-            <h5 id="callback-h5">Оставьте ваш номер, и мы вам перезвоним!</h5>
+            <h5 class="text-center" id="callback-h5">Оставьте номер, и мы Вам перезвоним!</h5>
             <div class="alert alert-success col-md-12" style="display: none;" id="success-cb" role="alert">
-              Спасибо, мы вам перезвоним в течении 20 минут.
+              Спасибо, мы Вам перезвоним в течении 20 минут.
             </div>
             <div class="alert alert-danger col-md-12" style="display: none;" id="error-cb" role="alert">
               Произошла ошибка. Попробуйте перезагрузить страницу.
@@ -1711,6 +1712,14 @@
             <h5>Есть вопросы по поводу ремонта или не можете самостоятельно определить поломку? Звоните нам на номер <a href="tel:+380963002435">+380963002435</a> или <a href="#" data-toggle="modal" data-target="#helpModal">оставьте свой номер</a> и мы Вам перезвоним в течении 20 минут (в рабочее время).</h5>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Callback button -->
+    <div class="callback-bt" id="callback-button">
+      <div class="text-call">
+          <i class="fa fa-phone"></i>
+          <a href="#" data-toggle="modal" data-target="#helpModal"><span>заказать<br>звонок</span></a>
       </div>
     </div>
 

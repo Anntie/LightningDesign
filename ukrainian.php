@@ -23,6 +23,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightning.css">
+    <link rel="stylesheet" href="css/callback.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108636989-1"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -275,6 +276,36 @@
         </div>
       </div>
     </section>
+    <section class="deals">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-sm-4 p-0 deal">
+            <img src="images/deal-glass.jpg" alt class="img-deal" />
+            <div class="deal-desc bg-dark-blue deal-text-light">
+              <h3>Розбили екран?</h3>
+              <p>При ремонті дисплею захисне скло у подарунок!</p>
+              <a href="#" class="btn btn-light btn-deal" data-toggle="modal" data-target="#deal1Modal">Детальніше</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 p-0 deal">
+            <img src="images/deal.jpg" alt class="img-deal" />
+            <div class="deal-desc bg-green-dark deal-text-light">
+              <h3>Горяча пропозиція!</h3>
+              <p>Замовте ремонт на завтра і отримайте знижку 10%</p>
+              <a href="#" class="btn btn-light btn-deal" data-toggle="modal" data-target="#deal2Modal">Детальніше</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 p-0 deal">
+            <img src="images/deal-3-magic.jpg" alt class="img-deal" />
+            <div class="deal-desc bg-blue deal-text-light">
+              <h3>Потрібна консультація?</h3>
+              <p>Наші спеціалісти допоможуть Вам визначити поломку та дадуть відповідь на всі запитання</p>
+              <a href="#" class="btn btn-light btn-deal"  data-toggle="modal" data-target="#deal3Modal">Детальніше</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="reviews-section" class="reviews text-center">
       <div class="review-contacts">
         <h5>Задоволені якісним сервісом? Залиште відгук у <a href="tg://resolve?domain=lightningservice">Telegram</a>, <a href="viber://chat?number=+380963002435">Viber</a>, <a href="whatsapp://send?phone=+380963002435">Whatsapp</a><br /><a href="mailto:reviews@lightning-service.com.ua">reviews@lightning-service.com.ua</a></h5>
@@ -442,6 +473,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 5</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
@@ -515,6 +547,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -540,6 +573,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 5s</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
@@ -613,6 +647,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -638,6 +673,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone SE</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
@@ -711,6 +747,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -736,6 +773,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 6 / 6 Plus</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
@@ -895,6 +933,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -920,6 +959,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 6s / 6s Plus</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
@@ -1080,6 +1120,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -1105,6 +1146,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 7 / 7 Plus</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
@@ -1264,6 +1306,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -1289,6 +1332,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 8 / 8 Plus</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
@@ -1370,6 +1414,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -1395,6 +1440,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone X</h2>
+                  <h5 class="promo-badge pt-3 pb-3 rounded">Замовте завчасно і отримайте знижку 10%!</h5>
                   <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
@@ -1429,6 +1475,7 @@
                       </div>
                     </div>
                   </div>
+                  <h6 class="bg-dark text-light pt-2 pb-2">Не можете визначити поломку? Не влаштовує ціна? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a></h6>
                   <h4 class="price d-none"></h4>
                   <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
@@ -1448,7 +1495,7 @@
               <div class="goback-arrow-left"></div><div class="goback-arrow-right"></div>
             </div>
             <div class="arrow-text">
-              <span class="goback-text">Вернуться назад</span>
+              <span class="goback-text">Повернутися назад</span>
             </div>
           </div>
           <div class="container">
@@ -1505,16 +1552,16 @@
 
     <!-- Deal 1 -->
     <div class="modal fade modal-small" id="deal1Modal" tabindex="-1" role="dialog" aria-labelledby="deal1ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-md" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="helpModalLabel">Deal 1 desc</h5>
+            <h4 class="modal-title" id="helpModalLabel">Захисне скло у подарунок!</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            Deal 1 content
+            <h5>При замовленні послуги "Заміна скла / екрану" або "Заміна дисплея" ми поклеїмо Вам захисне скло і дамо гарантію на 3 місяці. <a class="page-scroll" href="#services-section" data-dismiss="modal">Дізнатися ціни</a></h5>
           </div>
         </div>
       </div>
@@ -1522,33 +1569,17 @@
 
     <!-- Deal 2 -->
     <div class="modal fade modal-small" id="deal2Modal" tabindex="-1" role="dialog" aria-labelledby="deal2ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-md" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="helpModalLabel">Deal 2 desc</h5>
+            <h4 class="modal-title" id="helpModalLabel">Вигідна пропозиція!</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            Deal 2 content
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Deal 2 -->
-    <div class="modal fade modal-small" id="deal2Modal" tabindex="-1" role="dialog" aria-labelledby="deal2ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-md" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="helpModalLabel">Deal 2 desc</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Deal 2 content
+            <h5 class="promo-badge pt-3 pb-3 rounded text-center mb-2" style="width: 100%;">Замовте завчасно і отримайте знижку 10%!</h5>
+            <h5>При зазамовленні будь-яких послуг на наступний день ми даруємо Вам знижку. Це дає нам змогу створити графік для кожного майстра, щоб він зміг обслужити якомога більше клієнтів, а Вам - випити зайву чашку кави в компанії друзів :)</h5>
           </div>
         </div>
       </div>
@@ -1556,18 +1587,26 @@
 
     <!-- Deal 3 -->
     <div class="modal fade modal-small" id="deal3Modal" tabindex="-1" role="dialog" aria-labelledby="deal3ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-md" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="helpModalLabel">Deal 3 desc</h5>
+            <h4 class="modal-title" id="helpModalLabel">Безкоштовна консультація!</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            Deal 2 content
+            <h5>Є питання з приводу ремонту? Не можете самостійно визначити поломку? Дзвоніть нам на номер <a href="tel:+380963002435">+380963002435</a> або <a href="#" data-toggle="modal" data-target="#helpModal">залиште свій номер</a> і ми Вам передзвонимо протягом 20 хвилин (у робочий час).</h5>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Callback button -->
+    <div class="callback-bt" id="callback-button">
+      <div class="text-call">
+          <i class="fa fa-phone"></i>
+          <a href="#" data-toggle="modal" data-target="#helpModal"><span>замовити<br>дзвінок</span></a>
       </div>
     </div>
 
@@ -1575,7 +1614,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/lightning.js"></script>
+    <script src="js/lightning-ukr.js"></script>
     <script src="js/phone.js"></script>
   </body>
 </html>

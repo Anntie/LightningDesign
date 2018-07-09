@@ -49,6 +49,9 @@ $(document).ready(function() {
   });
   // End of modal fix
 
+  // Callback button
+  $("#callback-button").hide().delay(6000).fadeIn(400);
+
   $(".page-scroll").click(function(e) {
       e.preventDefault();
       $('html, body').animate({
@@ -254,6 +257,7 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#warning-cb").fadeOut();
       }, 5000);
+      return false;
     }
 
     const data = {'phone': phone};
