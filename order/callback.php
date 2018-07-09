@@ -19,6 +19,10 @@
   sendMessage(210219337, $message);
   // Taras : 398164578
   sendMessage(398164578, $message);
+  // Oleksiy : 287896231
+  sendMessage(287896231, $message);
+  // Shared : 451537258
+  sendMessage(451537258, $message);
 
   exit('0');
 ?>
