@@ -1,11 +1,18 @@
-﻿<!DOCTYPE html>
+<?php
+  session_start();
+  $promo = false;
+  if (isset($_SESSION['raveera'])) {
+    $promo = true;
+  }
+?>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Выездной ремонт iPhone Киев | lightning</title>
-    <meta name="description" content="Выездной ремонт Вашего айфона в удобное время в удобном месте за 20 минут." />
+    <meta name="description" content="Виїздний ремонт Вашого айфона в зручному місці в зручний час за 20 хвилин." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="ремонт iphone киев, ремонт айфонов киев, выездной ремонт, ремонт с выездом мастера, замена дисплея" />
+    <meta name="keywords" content="ремонт iphone київ, ремонт айфонів київ, виїздний ремонт, ремонт з виїздом майстра, заміна екрану" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
@@ -17,6 +24,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightning.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108636989-1"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108636989-1"></script>
     <script>
@@ -28,21 +36,19 @@
     </script>
   </head>
   <body>
+    <input type="hidden" id="promo" value="<?php echo $promo; ?>">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-green">
       <a class="navbar-brand" href="./"><img src="images/logo-2.svg" id="logo" style="margin-left: 1rem; width: 32px; height: 32px; margin-right: 4px;" class="d-inline-block align-top" alt="lightning"><span class="xxs-logo d-md-inline d-none">lightning</span><span class="xxs-logo d-lg-inline d-none" style="margin-left: 2px; color: #353b48;">service</span></a>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link active page-scroll d-none d-md-block" href="#about-section">О нас</a>
+          <a class="nav-link active page-scroll d-none d-md-block" href="#about-section">Про нас</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link active page-scroll d-none d-md-block" href="#services-section">Цены</a>
+          <a class="nav-link active page-scroll d-none d-md-block" href="#services-section">Ціни</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active page-scroll d-none d-md-block" href="#features-section">Преимущества</a>
+          <a class="nav-link active page-scroll d-none d-md-block" href="#features-section">Переваги</a>
         </li>
-        <!--<li class="nav-item">
-          <a class="nav-link active" href="accessories/">Магазин</a>
-        </li>-->
       </ul>
       <ul class="navbar-nav ml-auto pull-xs-right justify-content-end">
         <li class="nav-item">
@@ -61,17 +67,17 @@
           <a class="nav-link-custom fab fa-whatsapp" href="whatsapp://send?phone=+380963002435"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-custom nav-text-custom" href="ukrainian.html">УКР</a>
+          <a class="nav-link-custom nav-text-custom" href="./">РУС</a>
         </li>
       </ul>
     </nav>
     <section class="cover-1 text-center">
       <div class="cover-container pb-25">
         <div class="cover-inner container">
-          <h1 class="jumbotron-heading">Ремонт iPhone с выездом мастера в Киеве</h1>
+          <h1 class="jumbotron-heading">Ремонт iPhone з виїздом майcтра у Києві</h1>
           <p>
-            <a href="#services-section" class="btn btn-primary btn-lg mb-2 mr-2 ml-2 page-scroll">Узнать стоимость ремонта</a>
-            <a href="#" class="btn btn-primary btn-lg mb-2 ml-2 ml-2 call-service" data-toggle="modal" data-target="#helpModal">Вызвать мастера</a>
+            <a href="#services-section" class="btn btn-primary btn-lg mb-2 mr-2 ml-2 page-scroll">Дізнатися вартість ремонту</a>
+            <a href="#" class="btn btn-primary btn-lg mb-2 ml-2 ml-2 call-service" data-toggle="modal" data-target="#helpModal">Викликати майстра</a>
           </p>
         </div>
       </div>
@@ -83,17 +89,17 @@
             <img class="mb-4 img-fluid" data-src="images/placeholder-phone-min.png" >
           </div>
           <div class="col-md-6 text-left" >
-            <h2 class="h2-promo">Ремонт iPhone вышел на новый уровень.</h2>
-            <p class="lead mt-4 mb-5 p-promo">Мастер самостоятельно, бесплатно приедет в удобное Вам место и починит сломанное устройство в кратчайшие сроки – 20-30 минут. В условиях мегаполиса это невероятно удобно - ведь иногда сама поездка в сервисный центр может растянуться на полдня. </p>
+            <h2 class="h2-promo">Ремонт iPhone переходить на новий рівень.</h2>
+            <p class="lead mt-4 mb-5 p-promo">Майстер самостійно та безкоштовно приїде у зручне для Вас місце та відремонтує зламаний телефон за 20-30 хвилин. Це дуже зручно в реаліях мегаполісу - адже іноді лише поїздка до сервісного центру може затягнутися на півдня.</p>
 
             <div class="row">
               <div class="col-md-6 col-feature mb-4">
-                <h4 class="mb-3 h4-promo">Максимальное качество</h4>
-                <p class="p-promo">Высококвалифицированные профессионалы выполнят любой ремонт надёжно и быстро. Мы даём гарантию на то, что делаем.</p>
+                <h4 class="mb-3 h4-promo">Максимальна якість</h4>
+                <p class="p-promo">Висококваліфіковані спеціалісти виконають будь-який ремонт надійно та швидко. Ми даємо гарантію на те, що робимо. </p>
               </div>
               <div class="col-md-6 col-feature mb-4">
-                <h4 class="mb-3 h4-promo">Есть вопросы? Звоните!</h4>
-                <p class="p-promo">Наш менеджер с радостью объяснит интересующие Вас детали, поможет оформить заказ и ответит на вопросы.</p>
+                <h4 class="mb-3 h4-promo">Є запитання? Телефонуйте!</h4>
+                <p class="p-promo">Наш оператор з радістю пояснить деталі, що Вас зацікавлять, допоможе оформити замовлення та відповість на Ваші запитання.</p>
               </div>
             </div>
           </div>
@@ -108,7 +114,7 @@
             <div class="circle-empty rounded-circle d-none d-md-block"></div>
             <div class="steps-col">
               <h1 class="steps-number text-center d-inline-block d-md-block">1</h1>
-              <h6 class="steps-text d-inline d-md-block">Вы назначаете встречу в любом месте</h6>
+              <h6 class="steps-text d-inline d-md-block">Ви призначаєте зустріч в зручному місці</h6>
             </div>
           </div>
           <div class="col-12 col-md-3 p-0">
@@ -117,7 +123,7 @@
             <div class="circle-empty rounded-circle d-none d-md-block"></div>
             <div class="steps-col">
               <h1 class="steps-number text-center d-inline-block d-md-block">2</h1>
-              <h6 class="steps-text d-inline d-md-block">Мастер приедет в удобное для Вас время</h6>
+              <h6 class="steps-text d-inline d-md-block">Майстер приїде в зручний для Вас час</h6>
             </div>
           </div>
           <div class="col-12 col-md-3 p-0">
@@ -126,7 +132,7 @@
             <div class="circle-empty rounded-circle d-none d-md-block"></div>
             <div class="steps-col">
               <h1 class="steps-number text-center d-inline-block d-md-block">3</h1>
-              <h6 class="steps-text d-inline d-md-block">Отремонтирует ваш телефон за 20 минут</h6>
+              <h6 class="steps-text d-inline d-md-block">Відремонтує ваш телефон за 20 хвилин</h6>
             </div>
           </div>
           <div class="col-12 col-md-3 p-0">
@@ -134,14 +140,14 @@
             <div class="circle-full rounded-circle d-none d-md-block"></div>
             <div class="steps-col">
               <h1 class="steps-number text-center d-inline-block d-md-block">4</h1>
-              <h6 class="steps-text d-inline d-md-block">Примет оплату и выдаст гарантию на 3 месяца</h6>
+              <h6 class="steps-text d-inline d-md-block">Прийме оплату та видасть гарантію на 3 місяці</h6>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="services text-center" id="services-section">
-      <h2>Выберите свой iPhone</h2>
+      <h2>Оберіть свій iPhone</h2>
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 card-layout">
@@ -269,155 +275,17 @@
         </div>
       </div>
     </section>
-    <!--<section class="deals">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-sm-4 p-0 deal">
-            <img src="images/deal.jpg" alt class="img-deal" />
-            <div class="deal-desc bg-dark-blue deal-text-light">
-              <h3>Скидки на ремонт</h3>
-              <p>Лайк если репост, репост если лайк</p>
-              <a href="#" class="btn btn-light btn-deal" data-toggle="modal" data-target="#deal1Modal">Подробнее</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 p-0 deal">
-            <img src="images/deal-2-magic.jpg" alt class="img-deal" />
-            <div class="deal-desc bg-green-dark deal-text-light">
-              <h3>Скидки на ремонт</h3>
-              <p>Лайк если репост, репост если лайк</p>
-              <a href="#" class="btn btn-light btn-deal" data-toggle="modal" data-target="#deal2Modal">Подробнее</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 p-0 deal">
-            <img src="images/deal-3-magic.jpg" alt class="img-deal" />
-            <div class="deal-desc bg-blue deal-text-light">
-              <h3>Скидки на ремонт</h3>
-              <p>Лайк если репост, репост если лайк</p>
-              <a href="#" class="btn btn-light btn-deal"  data-toggle="modal" data-target="#deal3Modal">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="accessories">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 pl-0 pr-0">
-            <img src="images/accessories-iphone-201711.jpeg" class="img-accessories d-sm-block d-none " alt />
-            <img src="images/deal-2-magic.jpg" class="img-accessories d-sm-none d-block" alt />
-            <div class="accessories-text rounded">
-              <h1>Аксессуары</h1>
-              <h3><a href="accessories" class="accessories-link">Чехлы и зарядные устройства</a>&nbsp;&gt;</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>-->
-    <section id="reviews-section" class="reviews text-center pt-5">
-      <div class="container-fluid">
-        <h2 style="color: #f5f6fa;">Отзывы о нашей работе</h2>
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10 pt-4">
-            <div class="card-columns">
-
-              <div class="card">
-                <div class="card-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-4 p-0 text-center">
-                        <img src="images/customer-5.jpg" class="rounded-circle img-fluid" />
-                        <p class="card-text">Олег Савёлов</p>
-                      </div>
-                      <div class="col-8">
-                        <h5 class="card-title">Лучший сервис</h5>
-                        <p class="card-text text-left">Утром в спешке уронил айфон и разбил дисплей, думал что день испорчен. Но жена быстренько нашла этих ребят, и через минут 40 мастер приехал и оперативно всё заменил. Однозначно рекомендую.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-4 p-0 text-center">
-                        <img src="images/customer.jpg" class="rounded-circle img-fluid" />
-                        <p class="card-text">Михаил Бондаренко</p>
-                      </div>
-                      <div class="col-8">
-                        <h5 class="card-title">Хорошие спецы</h5>
-                        <p class="card-text text-left">Отлично поговорили с мастером пока тот чинил мой айфон, получил бесплатную лекцию на тему отличий оригинальных дисплеев от копий) Рекомедую)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-4 p-0 text-center">
-                        <img src="images/customer-2.jpg" class="rounded-circle img-fluid" />
-                        <p class="card-text">Макс Белкин</p>
-                      </div>
-                      <div class="col-8">
-                        <h5 class="card-title">Быстро, как и обещали</h5>
-                        <p class="card-text text-left">Мастер приехал за час, а отремонтировал вообще за 15 минут. Очень доволен качеством и скоростью, обращусь ещё при случае. Хотя, надеюсь, не придётся)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-4 p-0 text-center">
-                        <img src="images/customer-3.jpg" class="rounded-circle img-fluid" />
-                        <p class="card-text">Юлия Кузнецова</p>
-                      </div>
-                      <div class="col-8">
-                        <h5 class="card-title">Отличный сервис!</h5>
-                        <p class="card-text text-left">Просто мастера своего дела, тут и сказать больше нечего.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-4 p-0 text-center">
-                        <img src="images/customer-4.jpg" class="rounded-circle img-fluid" />
-                        <p class="card-text">Ярослав Лозовой</p>
-                      </div>
-                      <div class="col-8">
-                        <h5 class="card-title">Знают своё дело.</h5>
-                        <p class="card-text text-left">Во время тусовки с друзьями в баре пробил телефон углом стола. Немного расстроился, но решил, что на следующий день пойду в СЦ и отремонтирую. Но знакомый предложил произвести ремонт тут и сейчас, пока мы будет развлекаться. Я подумал что это шутка, ведь ремонт подобного устройства мне представлялся сложным и долгим процессом. Но приехали ребята из lightning и всё сделали на том же злополучном столе. 5 из 5.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="reviews-section" class="reviews text-center">
       <div class="review-contacts">
-        <h5>Довольны качеством сервиса? Оставьте отзыв в <a href="tg://resolve?domain=lightningservice">Telegram</a>, <a href="viber://chat?number=+380963002435">Viber</a>, <a href="whatsapp://send?phone=+380963002435">Whatsapp</a><br /><a href="mailto:reviews@lightning-service.com.ua">reviews@lightning-service.com.ua</a></h5>
+        <h5>Задоволені якісним сервісом? Залиште відгук у <a href="tg://resolve?domain=lightningservice">Telegram</a>, <a href="viber://chat?number=+380963002435">Viber</a>, <a href="whatsapp://send?phone=+380963002435">Whatsapp</a><br /><a href="mailto:reviews@lightning-service.com.ua">reviews@lightning-service.com.ua</a></h5>
       </div>
     </section>
     <section id="features-section" class="features-4 text-center">
       <div class="container">
         <div class="row justify-center">
           <div class="col-md-8 text-center" >
-            <h2>Наши преимущества</h2>
-            <p class="lead mt-3">Молниеносный сервис Lightning выгодно отличается от других</p>
+            <h2>Наші переваги</h2>
+            <p class="lead mt-3">Швидкісний сервіс Lightning вигідно відрізняється від інших</p>
           </div>
         </div>
         <div class="container">
@@ -430,7 +298,7 @@
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
-                  <h4 class="feature-desc">Бесплатный выезд по всему Киеву</h4>
+                  <h4 class="feature-desc">Безкоштовний виїзд у межах всього Києва</h4>
                 </div>
               </div>
             </div>
@@ -442,7 +310,7 @@
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
-                  <h4 class="feature-desc">Гарантия на работу - 3 месяца</h4>
+                  <h4 class="feature-desc">Гарантія на роботу - 3 місяці</h4>
                 </div>
               </div>
             </div>
@@ -454,7 +322,7 @@
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
-                  <h4 class="feature-desc">Только проверенные детали</h4>
+                  <h4 class="feature-desc">Тільки перевірені деталі</h4>
                 </div>
               </div>
             </div>
@@ -468,7 +336,7 @@
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
-                  <h4 class="feature-desc">Можно оплатить картой без %</h4>
+                  <h4 class="feature-desc">Можна оплатити карткою без %</h4>
                 </div>
               </div>
             </div>
@@ -480,7 +348,7 @@
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
-                  <h4 class="feature-desc">Самые лучшие мастера и инструменты</h4>
+                  <h4 class="feature-desc">Найкращі майстри та інструменти</h4>
                 </div>
               </div>
             </div>
@@ -492,7 +360,7 @@
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
-                  <h4 class="feature-desc">Ремонт от 10 минут</h4>
+                  <h4 class="feature-desc">Ремонт від 10 хвилин</h4>
                 </div>
               </div>
             </div>
@@ -524,21 +392,21 @@
       <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="helpModalLabel">Вызвать мастера</h5>
+            <h5 class="modal-title" id="helpModalLabel">Викликати майстра</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <h5 id="callback-h5">Оставьте ваш номер, и мы вам перезвоним!</h5>
+            <h5 id="callback-h5">Залиште ваш мобільний номер і вам зателефонують!</h5>
             <div class="alert alert-success col-md-12" style="display: none;" id="success-cb" role="alert">
-              Спасибо, мы вам перезвоним в течении 20 минут.
+              Дякуємо, Вам зателефонуються в межах 10 хвилин.
             </div>
             <div class="alert alert-danger col-md-12" style="display: none;" id="error-cb" role="alert">
-              Произошла ошибка. Попробуйте перезагрузить страницу.
+              Помилка. Будь ласка, спробуйте перезавантажити сторінку.
             </div>
             <div class="alert alert-warning col-md-12" style="display: none;" id="warning-cb" role="alert">
-              Пожалуйста, заполните форму.
+              Будь ласка, введіть ваш мобільний номер.
             </div>
             <form class="mt-4" id="callback-form">
               <div class="container">
@@ -547,7 +415,7 @@
                     <div class="input-group">
                       <span class="input-group-addon mb-4" id="basic-addon1">+38</span>
                       <input type="text" id="phonetocall" class="form-control-custom mb-4" aria-describedby="basic-addon1" placeholder="Ваш номер">
-                      <input type="submit" class="btn btn-primary mb-4 btn-bigger" style="margin-left: 5px;" value="Перезвоните мне" />
+                      <input type="submit" class="btn btn-primary mb-4 btn-bigger" style="margin-left: 5px;" value="Зателефонуйте мені" />
                       <input type="submit" class="btn btn-primary mb-4 btn-smaller" style="margin-left: 5px;" value="OK" />
                     </div>
                   </div>
@@ -574,38 +442,38 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 5</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
                       <div class="col-sm-12 col-md-6">
                         <table class="table table-hover service-table left-table mb-0">
                           <tbody id="iPhone5-tbody">
                             <tr>
-                              <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴599</td>
                             </tr>
                             <tr>
-                              <td>Замена дисплея (хорошая копия)</td>
+                              <td>Заміна дисплея (хороша копія)</td>
                               <td>₴999</td>
                             </tr>
                             <tr>
-                              <td>Замена дисплея (оригинал с другого устройства)</td>
+                              <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                               <td>₴1499</td>
                             </tr>
                             <tr>
-                              <td>Замена аккумулятора</td>
+                              <td>Заміна батареї</td>
                               <td>₴499</td>
                             </tr>
                             <tr>
-                              <td>Замена основной камеры</td>
+                              <td>Заміна основної камери</td>
                               <td>₴499</td>
                             </tr>
                             <tr>
-                              <td>Замена фронтальной камеры</td>
+                              <td>Заміна фронтальної камери</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена кнопки Home</td>
+                              <td>Заміна кнопки Home</td>
                               <td>₴499</td>
                             </tr>
                           </tbody>
@@ -615,32 +483,32 @@
                         <table class="table table-hover service-table">
                           <tbody id="iPhone5-tbody">
                             <tr>
-                              <td>Замена слухового динамика</td>
+                              <td>Заміна слухового динаміка</td>
                               <td>₴299</td>
                             </tr>
                             <tr>
-                              <td>Замена полифонического динамика</td>
+                              <td>Заміна поліфонічного динаміка</td>
                               <td>₴349</td>
                             </tr>
                             <tr>
-                              <td>Замена разъема зарядки-синхронизации lightning</td>
+                              <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена микрофона</td>
+                              <td>Заміна мікрофона</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена вибромотора</td>
+                              <td>Заміна вібромотора</td>
                               <td>₴199</td>
                             </tr>
                             <tr>
-                              <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴199</td>
                             </tr>
                             <tr class="tr-disabled">
-                              <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                              <td>Бесплатно!</td>
+                              <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Безкоштовно!</td>
                             </tr>
                           </tbody>
                         </table>
@@ -648,7 +516,7 @@
                     </div>
                   </div>
                   <h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -672,38 +540,38 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 5s</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
                       <div class="col-sm-12 col-md-6">
                         <table class="table table-hover service-table left-table mb-0">
                           <tbody id="iPhone5s-tbody">
                             <tr>
-                              <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴599</td>
                             </tr>
                             <tr>
-                              <td>Замена дисплея (хорошая копия)</td>
+                              <td>Заміна дисплея (хороша копія)</td>
                               <td>₴999</td>
                             </tr>
                             <tr>
-                              <td>Замена дисплея (оригинал с другого устройства)</td>
+                              <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                               <td>₴1599</td>
                             </tr>
                             <tr>
-                              <td>Замена аккумулятора</td>
+                              <td>Заміна батареї</td>
                               <td>₴499</td>
                             </tr>
                             <tr>
-                              <td>Замена основной камеры</td>
+                              <td>Заміна основної камери</td>
                               <td>₴499</td>
                             </tr>
                             <tr>
-                              <td>Замена фронтальной камеры</td>
+                              <td>Заміна фронтальної камери</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена кнопки Home</td>
+                              <td>Заміна кнопки Home</td>
                               <td>₴499</td>
                             </tr>
                           </tbody>
@@ -713,32 +581,32 @@
                         <table class="table table-hover service-table">
                           <tbody id="iPhone5s-tbody">
                             <tr>
-                              <td>Замена слухового динамика</td>
+                              <td>Заміна слухового динаміка</td>
                               <td>₴299</td>
                             </tr>
                             <tr>
-                              <td>Замена полифонического динамика</td>
+                              <td>Заміна поліфонічного динаміка</td>
                               <td>₴349</td>
                             </tr>
                             <tr>
-                              <td>Замена разъема зарядки-синхронизации lightning</td>
+                              <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена микрофона</td>
+                              <td>Заміна мікрофона</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена вибромотора</td>
+                              <td>Заміна вібромотора</td>
                               <td>₴199</td>
                             </tr>
                             <tr>
-                              <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴199</td>
                             </tr>
                             <tr class="tr-disabled">
-                              <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                              <td>Бесплатно!</td>
+                              <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Безкоштовно!</td>
                             </tr>
                           </tbody>
                         </table>
@@ -746,7 +614,7 @@
                     </div>
                   </div>
                   <h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -770,38 +638,38 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone SE</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
                       <div class="col-sm-12 col-md-6">
                         <table class="table table-hover service-table left-table mb-0">
                           <tbody id="iPhoneSE-tbody">
                             <tr>
-                              <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴699</td>
                             </tr>
                             <tr>
-                              <td>Замена дисплея (хорошая копия)</td>
+                              <td>Заміна дисплея (хороша копія)</td>
                               <td>₴999</td>
                             </tr>
                             <tr>
-                              <td>Замена дисплея (оригинал с другого устройства)</td>
+                              <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                               <td>₴1999</td>
                             </tr>
                             <tr>
-                              <td>Замена аккумулятора</td>
+                              <td>Заміна батареї</td>
                               <td>₴599</td>
                             </tr>
                             <tr>
-                              <td>Замена основной камеры</td>
+                              <td>Заміна основної камери</td>
                               <td>₴599</td>
                             </tr>
                             <tr>
-                              <td>Замена фронтальной камеры</td>
+                              <td>Заміна фронтальної камери</td>
                               <td>₴499</td>
                             </tr>
                             <tr>
-                              <td>Замена кнопки Home</td>
+                              <td>Заміна кнопки Home</td>
                               <td>₴499</td>
                             </tr>
                           </tbody>
@@ -811,40 +679,40 @@
                         <table class="table table-hover service-table">
                           <tbody id="iPhoneSE-tbody">
                             <tr>
-                              <td>Замена слухового динамика</td>
+                              <td>Заміна слухового динаміка</td>
                               <td>₴349</td>
                             </tr>
                             <tr>
-                              <td>Замена полифонического динамика</td>
+                              <td>Заміна поліфонічного динаміка</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена разъема зарядки-синхронизации lightning</td>
+                              <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена микрофона</td>
+                              <td>Заміна мікрофона</td>
                               <td>₴399</td>
                             </tr>
                             <tr>
-                              <td>Замена вибромотора</td>
+                              <td>Заміна вібромотора</td>
                               <td>₴199</td>
                             </tr>
                             <tr>
-                              <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴199</td>
                             </tr>
                             <tr class="tr-disabled">
-                              <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                              <td>Бесплатно!</td>
+                              <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Безкоштовно!</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
                     </div>
                   </div>
-									<h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -868,7 +736,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 6 / 6 Plus</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
                       <a class="nav-link tab-link active" id="iphone6-tab" data-toggle="tab" href="#iphone6" role="tab" aria-controls="iphone6" aria-selected="true">iPhone 6</a>
@@ -885,31 +753,31 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone6-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (хорошая копия)</td>
+                                  <td>Заміна дисплея (хороша копія)</td>
                                   <td>₴1499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴1999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена аккумулятора</td>
+                                  <td>Заміна батареї</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена основной камеры</td>
+                                  <td>Заміна основної камери</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена фронтальной камеры</td>
+                                  <td>Заміна фронтальної камери</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена кнопки Home</td>
+                                  <td>Заміна кнопки Home</td>
                                   <td>₴499</td>
                                 </tr>
                               </tbody>
@@ -919,32 +787,32 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone6-tbody">
                                 <tr>
-                                  <td>Замена слухового динамика</td>
+                                  <td>Заміна слухового динаміка</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена полифонического динамика</td>
+                                  <td>Заміна поліфонічного динаміка</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена разъема зарядки-синхронизации lightning</td>
+                                  <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена микрофона</td>
+                                  <td>Заміна мікрофона</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена вибромотора</td>
+                                  <td>Заміна вібромотора</td>
                                   <td>₴299</td>
                                 </tr>
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴199</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -959,31 +827,31 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone6Plus-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴1499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (хорошая копия)</td>
+                                  <td>Заміна дисплея (хороша копія)</td>
                                   <td>₴1999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴2499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена аккумулятора</td>
+                                  <td>Заміна батареї</td>
                                   <td>₴649</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена основной камеры</td>
+                                  <td>Заміна основної камери</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена фронтальной камеры</td>
+                                  <td>Заміна фронтальної камери</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена кнопки Home</td>
+                                  <td>Заміна кнопки Home</td>
                                   <td>₴499</td>
                                 </tr>
                               </tbody>
@@ -993,32 +861,32 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone6Plus-tbody">
                                 <tr>
-                                  <td>Замена слухового динамика</td>
+                                  <td>Заміна слухового динаміка</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена полифонического динамика</td>
+                                  <td>Заміна поліфонічного динаміка</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена разъема зарядки-синхронизации lightning</td>
+                                  <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена микрофона</td>
+                                  <td>Заміна мікрофона</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена вибромотора</td>
+                                  <td>Заміна вібромотора</td>
                                   <td>₴299</td>
                                 </tr>
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴199</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1027,8 +895,8 @@
                       </div>
                     </div>
                   </div>
-									<h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -1052,7 +920,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 6s / 6s Plus</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
                       <a class="nav-link tab-link active" id="iphone6s-tab" data-toggle="tab" href="#iphone6s" role="tab" aria-controls="iphone6s" aria-selected="true">iPhone 6s</a>
@@ -1069,31 +937,31 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone6s-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (хорошая копия)</td>
+                                  <td>Заміна дисплея (хороша копія)</td>
                                   <td>₴1599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴2199</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена аккумулятора</td>
+                                  <td>Заміна батареї</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена основной камеры</td>
+                                  <td>Заміна основної камери</td>
                                   <td>₴1199</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена фронтальной камеры</td>
+                                  <td>Заміна фронтальної камери</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена кнопки Home</td>
+                                  <td>Заміна кнопки Home</td>
                                   <td>₴499</td>
                                 </tr>
                               </tbody>
@@ -1103,32 +971,32 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone6s-tbody">
                                 <tr>
-                                  <td>Замена слухового динамика</td>
+                                  <td>Заміна слухового динаміка</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена полифонического динамика</td>
+                                  <td>Заміна поліфонічного динаміка</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена разъема зарядки-синхронизации lightning</td>
+                                  <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена микрофона</td>
+                                  <td>Заміна мікрофона</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена вибромотора</td>
+                                  <td>Заміна вібромотора</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴199</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1144,31 +1012,31 @@
                               <tbody id="iPhone6sPlus-tbody">
                                 <tr>
                                   <tr>
-                                    <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                    <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                     <td>₴1499</td>
                                   </tr>
                                   <tr>
-                                    <td>Замена дисплея (хорошая копия)</td>
+                                    <td>Заміна дисплея (хороша копія)</td>
                                     <td>₴2099</td>
                                   </tr>
                                   <tr>
-                                    <td>Замена дисплея (оригинал с другого устройства)</td>
+                                    <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                     <td>₴2999</td>
                                   </tr>
                                   <tr>
-                                    <td>Замена аккумулятора</td>
+                                    <td>Заміна батареї</td>
                                     <td>₴649</td>
                                   </tr>
                                   <tr>
-                                    <td>Замена основной камеры</td>
+                                    <td>Заміна основної камери</td>
                                     <td>₴1199</td>
                                   </tr>
                                   <tr>
-                                    <td>Замена фронтальной камеры</td>
+                                    <td>Заміна фронтальної камери</td>
                                     <td>₴499</td>
                                   </tr>
                                   <tr>
-                                    <td>Замена кнопки Home</td>
+                                    <td>Заміна кнопки Home</td>
                                     <td>₴499</td>
                                   </tr>
                               </tbody>
@@ -1178,32 +1046,32 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone6sPlus-tbody">
                                 <tr>
-                                  <td>Замена слухового динамика</td>
+                                  <td>Заміна слухового динаміка</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена полифонического динамика</td>
+                                  <td>Заміна поліфонічного динаміка</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена разъема зарядки-синхронизации lightning</td>
+                                  <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена микрофона</td>
+                                  <td>Заміна мікрофона</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена вибромотора</td>
+                                  <td>Заміна вібромотора</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴199</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1212,8 +1080,8 @@
                       </div>
                     </div>
                   </div>
-									<h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -1237,7 +1105,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 7 / 7 Plus</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
                       <a class="nav-link tab-link active" id="iphone7-tab" data-toggle="tab" href="#iphone7" role="tab" aria-controls="iphone7" aria-selected="true">iPhone 7</a>
@@ -1254,31 +1122,31 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone7-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴1799</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (хорошая копия)</td>
+                                  <td>Заміна дисплея (хороша копія)</td>
                                   <td>₴1999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴2999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена аккумулятора</td>
+                                  <td>Заміна батареї</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена основной камеры</td>
+                                  <td>Заміна основної камери</td>
                                   <td>₴1299</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена фронтальной камеры</td>
+                                  <td>Заміна фронтальної камери</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена кнопки Home</td>
+                                  <td>Заміна кнопки Home</td>
                                   <td>₴499</td>
                                 </tr>
                               </tbody>
@@ -1288,32 +1156,32 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone7-tbody">
                                 <tr>
-                                  <td>Замена слухового динамика</td>
+                                  <td>Заміна слухового динаміка</td>
                                   <td>₴399</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена полифонического динамика</td>
+                                  <td>Заміна поліфонічного динаміка</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена разъема зарядки-синхронизации lightning</td>
+                                  <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена микрофона</td>
+                                  <td>Заміна мікрофона</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена вибромотора</td>
+                                  <td>Заміна вібромотора</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴199</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1328,31 +1196,31 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone7Plus-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴2199</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (хорошая копия)</td>
+                                  <td>Заміна дисплея (хороша копія)</td>
                                   <td>₴2599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴4999</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена аккумулятора</td>
+                                  <td>Заміна батареї</td>
                                   <td>₴699</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена основной камеры</td>
+                                  <td>Заміна основної камери</td>
                                   <td>₴2499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена фронтальной камеры</td>
+                                  <td>Заміна фронтальної камери</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена кнопки Home</td>
+                                  <td>Заміна кнопки Home</td>
                                   <td>₴499</td>
                                 </tr>
                               </tbody>
@@ -1362,32 +1230,32 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone7Plus-tbody">
                                 <tr>
-                                  <td>Замена слухового динамика</td>
+                                  <td>Заміна слухового динаміка</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена полифонического динамика</td>
+                                  <td>Заміна поліфонічного динаміка</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена разъема зарядки-синхронизации lightning</td>
+                                  <td>Заміна роз'єму зарядки-синхронізації lightning</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена микрофона</td>
+                                  <td>Заміна мікрофона</td>
                                   <td>₴599</td>
                                 </tr>
                                 <tr>
-                                  <td>Замена вибромотора</td>
+                                  <td>Заміна вібромотора</td>
                                   <td>₴499</td>
                                 </tr>
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴199</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1396,8 +1264,8 @@
                       </div>
                     </div>
                   </div>
-									<h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -1421,7 +1289,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone 8 / 8 Plus</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item">
                       <a class="nav-link tab-link active" id="iphone8-tab" data-toggle="tab" href="#iphone8" role="tab" aria-controls="iphone8" aria-selected="true">iPhone 8</a>
@@ -1438,12 +1306,12 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone8-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴2499</td>
                                 </tr>
 
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴7999</td>
                                 </tr>
                               </tbody>
@@ -1453,12 +1321,12 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone8-tbody">
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴299</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1473,12 +1341,12 @@
                             <table class="table table-hover service-table left-table mb-0">
                               <tbody id="iPhone8Plus-tbody">
                                 <tr>
-                                  <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴3499</td>
                                 </tr>
 
                                 <tr>
-                                  <td>Замена дисплея (оригинал с другого устройства)</td>
+                                  <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                                   <td>₴9999</td>
                                 </tr>
                               </tbody>
@@ -1488,12 +1356,12 @@
                             <table class="table table-hover service-table">
                               <tbody id="iPhone8Plus-tbody">
                                 <tr>
-                                  <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                                   <td>₴299</td>
                                 </tr>
                                 <tr class="tr-disabled">
-                                  <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                                  <td>Бесплатно!</td>
+                                  <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                                  <td>Безкоштовно!</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1502,8 +1370,8 @@
                       </div>
                     </div>
                   </div>
-									<h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <h4 class="price d-none"></h4>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -1527,19 +1395,19 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2>iPhone X</h2>
-                  <p class="item-intro text-muted">Нажмите на нужный Вам вид работы, чтобы добавить его в заказ</p>
+                  <p class="item-intro text-muted">Натисніть на бажаний вид роботи, щоб додати його до замовлення</p>
                   <div class="container">
                     <div class="row no-gutters">
                       <div class="col-sm-12 col-md-6">
                         <table class="table table-hover service-table left-table mb-0">
                           <tbody id="iPhoneX-tbody">
                             <tr>
-                              <td>Замена стекла/экрана <i class="fas fa-info-circle" data-original-title="Ремонт в течении дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Заміна скла/екрана <i class="fas fa-info-circle" data-original-title="Ремонт протягом дня" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴5999</td>
                             </tr>
 
                             <tr>
-                              <td>Замена дисплея (оригинал с другого устройства)</td>
+                              <td>Заміна дисплея (оригінал з іншого пристрою)</td>
                               <td>₴15999</td>
                             </tr>
                           </tbody>
@@ -1549,12 +1417,12 @@
                         <table class="table table-hover service-table">
                           <tbody id="iPhoneX-tbody">
                             <tr>
-                              <td>Поклейка защитного стекла <i class="fas fa-info-circle" data-original-title="Бесплатно при ремонте дисплея" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Поклейка захисного скла <i class="fas fa-info-circle" data-original-title="Безкоштовно при ремонті дисплею" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
                               <td>₴299</td>
                             </tr>
                             <tr class="tr-disabled">
-                              <td>Диагностика <i class="fas fa-info-circle" data-original-title="При любом ремонте" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
-                              <td>Бесплатно!</td>
+                              <td>Діагностика <i class="fas fa-info-circle" data-original-title="При будь-якому ремонті" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
+                              <td>Безкоштовно!</td>
                             </tr>
                           </tbody>
                         </table>
@@ -1562,7 +1430,7 @@
                     </div>
                   </div>
                   <h4 class="price d-none"></h4>
-                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти к заказу</button>
+                  <button href="#orderModal" class="btn btn-secondary page-scroll gotocart" data-toggle="modal" disabled="true" type="button">Перейти до замовлення</button>
                 </div>
               </div>
             </div>
@@ -1588,24 +1456,24 @@
               <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2>Как мы можем с Вами связаться?</h2>
-                  <p class="item-intro text-muted">Оставьте Ваши контакты и мы Вам перезвоним в кратчайшие сроки</p>
+                  <h2>Як ми можемо з Вами зв'язатися?</h2>
+                  <p class="item-intro text-muted">Залиште Ваші контакти і ми якнайшвидше Вам зателефонуємо</p>
                   <form class="contact-form mt-4" id="order-form">
                     <div class="alert alert-success col-md-12" style="display: none;" id="success" role="alert">
-                      Ваш заказ принят!
+                      Ваше замовлення було прийнято!
                     </div>
                     <div class="alert alert-danger col-md-12" style="display: none;" id="error" role="alert">
-                      Произошла ошибка при размещении заказа. Попробуйте перезагрузить страницу.
+                      Сталася помилка під час розміщення замовлення. Спробуйте перезавантажити сторінку.
                     </div>
                     <div class="alert alert-warning col-md-12" style="display: none;" id="warning" role="alert">
-                      Пожалуйста, заполните форму заказа.
+                      Будь ласка, заповніть форму замовлення.
                     </div>
                     <div class="container">
                       <div class="row">
                         <div class="col-md-6">
                           <div class="input-group">
                             <span class="input-group-addon mb-4"><span class="far fa-user"></span></span>
-                            <input type="text" id="name" class="form-control-custom mb-4" placeholder="Имя">
+                            <input type="text" id="name" class="form-control-custom mb-4" placeholder="Ім'я">
                           </div>
                         </div>
                         <div class="col-md-6">
@@ -1621,7 +1489,7 @@
                           <h4 class="price d-none"></h4>
                         </div>
                         <div class="col-md-12">
-                          <button id="submit" type="submit" class="btn btn-primary btn-lg">Отправить</button>
+                          <button id="submit" type="submit" class="btn btn-primary btn-lg">Надіслати</button>
                         </div>
                       </div>
                     </div>

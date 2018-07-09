@@ -807,3 +807,35 @@ img[data-src] {
     font-size: .8rem;
   }
 }
+
+.promo-badge {
+  background: linear-gradient(135deg, #fda000 0%,#d31f8a 100%);
+  color: #fff;
+  width: 55%;
+  display: block;
+  margin: 0 auto;
+}
+
+.call-badge {
+  /*background:linear-gradient(135deg, #16ead8 0%,#6077ea 100%);*/
+  background: #34495e;
+  color: #fff;
+}
+
+.modal-dialog-centered {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  min-height:calc(100% - (.5rem * 2));
+}
+
+h4.modal-title {
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer !important;
+}
