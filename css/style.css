@@ -197,14 +197,14 @@ li.nav-item .btn-white {
   color: #46484a; }
 
 .cover-1 {
-  background: #2b2d34 url(../images/LightningService-min.jpg) center;
+  background: #2b2d34 url(../images/1-magic.jpg) center;
   background-size: cover;
-  min-height: 50rem;
   height: auto;
   border-radius: 0;
   width: 100%;
   color: #fff;
-  padding-top: 5rem; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
   .cover-1 h1 {
     font-weight: 200; }
   .cover-1 p.lead {

@@ -81,7 +81,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .content-4 {
-  background-color: #2b2d34;
+  /* background-color: #2b2d34; */
+  background: linear-gradient(135deg, #23242a 20%, #464953 100%);;
   margin-top: 0 !important;
   color: #ecf0f1 !important;
 }
