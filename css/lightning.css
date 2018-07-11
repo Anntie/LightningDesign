@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 * {
-  font-family: 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -92,13 +91,8 @@ p, h1, h2, h3, h4, h5, h6 {
   padding-top: 6rem;
 }
 
-.h2-promo {
-  font-family: "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
-}
-
 .p-promo {
   color: #bdc3c7;
-  font-family: "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
   font-weight: 400;
 }
 
@@ -214,8 +208,7 @@ th {
   .service-modal .modal-content p.item-intro {
     font-size: 16px;
     font-style: italic;
-    margin: 20px 0 30px;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    margin: 20px 0 30px; }
   .service-modal .modal-content ul.list-inline {
     margin-top: 0;
     margin-bottom: 30px; }
@@ -263,7 +256,6 @@ th {
 
 .service-modal .close-modal-extended {
   cursor: pointer;
-  font-family: 'Droid Serif', "Helvetica Neue", "Helvetica", "Noto Sans", sans-serif;
   text-transform: uppercase;
   background-color: transparent; }
   .service-modal .close-modal-extended:hover {

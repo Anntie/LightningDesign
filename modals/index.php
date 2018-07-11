@@ -56,8 +56,9 @@
                       <div class="col-sm-12 col-md-6">
                         <table class="table table-hover service-table">
                           <tbody id="iPhone<?php echo $model ?>-tbody">
+                            <?php $i = 0; ?>
                             <?php foreach ($prices["iPhone " . $model] as $key => $value) : ?>
-                            <?php if ($i < 7) continue; ?>
+                            <?php if ($i++ < 7) continue; ?>
                             <tr>
                               <td><?php echo $services[$value["service_id"] - 1][$lang];?></td>
                               <td>₴<?php echo $value["price"]; ?></td>
@@ -100,8 +101,9 @@
                       <div class="col-sm-12 col-md-6">
                         <table class="table table-hover service-table">
                           <tbody id="iPhone<?php echo $model ?>Plus-tbody">
+                            <?php $i = 0; ?>
                             <?php foreach ($prices["iPhone " . $model . "+"] as $key => $value) : ?>
-                            <?php if ($i < 7) continue; ?>
+                            <?php if ($i++ < 7) continue; ?>
                             <tr>
                               <td><?php echo $services[$value["service_id"] - 1][$lang];?></td>
                               <td>₴<?php echo $value["price"]; ?></td>
@@ -145,13 +147,13 @@
                   <div class="col-sm-12 col-md-6">
                     <table class="table table-hover service-table">
                       <tbody id="iPhone<?php echo $model ?>-tbody">
+                        <?php $i = 0; ?>
                         <?php foreach ($prices["iPhone " . $model] as $key => $value) : ?>
-                        <?php if ($i < 7) continue; ?>
+                        <?php if ($i++ < 7) continue; ?>
                         <tr>
                           <td><?php echo $services[$value["service_id"] - 1][$lang];?></td>
                           <td>₴<?php echo $value["price"]; ?></td>
                         </tr>
-                        <?php $i++ ?>
                         <?php endforeach; ?>
                         <tr>
                           <td><?php echo ($lang === "ru") ? "Поклейка защитного стекла" : "Поклейка захисного скла" ?> <i class="fas fa-info-circle" data-original-title="<?php echo ($lang === "ru") ? "Бесплатно при ремонте дисплея" : "Безкоштовно при ремонті дисплею" ?>" data-container="body" data-toggle="tooltip" data-placement="top"></i></td>
