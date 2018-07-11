@@ -44,9 +44,11 @@
                             <?php foreach ($prices["iPhone " . $model] as $key => $value) : ?>
                             <?php if ($i === 7) break; ?>
                             <tr>
-                              <td><?php echo $services[$value["service_id"] - 1][$lang]; if ($value["service_id"] - 1 == 1) echo '<i class="fas fa-info-circle" data-original-title="Ремонт ' . ($lang === "ru") ? 
-                              'в течении' : 'протягом' . ' дня" data-container="body" data-toggle="tooltip" data-placement="top"></i>'; ?></td>
-                              <td>₴<?php echo $value["price"]; ?></td>
+                              <td><?php echo $services[$value["service_id"] - 1][$lang]; ?> <?php
+                              if ($value["service_id"] == 1)
+                                echo '<i class="fas fa-info-circle" data-original-title="Ремонт ' . (($lang === "ru") ? 'в течении' : 'протягом') . ' дня" data-container="body" data-toggle="tooltip" data-placement="top"></i>';?>
+                              </td>
+                              <td>₴<?php echo intval($value["price"]); ?></td>
                             </tr>
                             <?php $i++ ?>
                             <?php endforeach; ?>
@@ -61,7 +63,7 @@
                             <?php if ($i++ < 7) continue; ?>
                             <tr>
                               <td><?php echo $services[$value["service_id"] - 1][$lang];?></td>
-                              <td>₴<?php echo $value["price"]; ?></td>
+                              <td>₴<?php echo intval($value["price"]); ?></td>
                             </tr>
                             <?php $i++ ?>
                             <?php endforeach; ?>
@@ -89,9 +91,11 @@
                             <?php foreach ($prices["iPhone " . $model . "+"] as $key => $value) : ?>
                             <?php if ($i === 7) break; ?>
                             <tr>
-                              <td><?php echo $services[$value["service_id"] - 1][$lang]; if ($value["service_id"] - 1 == 1) echo '<i class="fas fa-info-circle" data-original-title="Ремонт ' . ($lang === "ru") ? 
-                              'в течении' : 'протягом' . ' дня" data-container="body" data-toggle="tooltip" data-placement="top"></i>'; ?></td>
-                              <td>₴<?php echo $value["price"]; ?></td>
+                              <td><?php echo $services[$value["service_id"] - 1][$lang]; ?> <?php
+                              if ($value["service_id"] == 1)
+                                echo '<i class="fas fa-info-circle" data-original-title="Ремонт ' . (($lang === "ru") ? 'в течении' : 'протягом') . ' дня" data-container="body" data-toggle="tooltip" data-placement="top"></i>';?>
+                            </td>
+                              <td>₴<?php echo intval($value["price"]); ?></td>
                             </tr>
                             <?php $i++ ?>
                             <?php endforeach; ?>
@@ -106,7 +110,7 @@
                             <?php if ($i++ < 7) continue; ?>
                             <tr>
                               <td><?php echo $services[$value["service_id"] - 1][$lang];?></td>
-                              <td>₴<?php echo $value["price"]; ?></td>
+                              <td>₴<?php echo intval($value["price"]); ?></td>
                             </tr>
                             <?php $i++ ?>
                             <?php endforeach; ?>
@@ -135,9 +139,11 @@
                         <?php foreach ($prices["iPhone " . $model] as $key => $value) : ?>
                         <?php if ($i === 7) break; ?>
                         <tr>
-                          <td><?php echo $services[$value["service_id"] - 1][$lang]; if ($value["service_id"] - 1 == 1) echo '<i class="fas fa-info-circle" data-original-title="Ремонт ' . ($lang === "ru") ? 
-                          'в течении' : 'протягом' . ' дня" data-container="body" data-toggle="tooltip" data-placement="top"></i>'; ?></td>
-                          <td>₴<?php echo $value["price"]; ?></td>
+                          <td><?php echo $services[$value["service_id"] - 1][$lang]; ?> <?php
+                            if ($value["service_id"] == 1)
+                              echo '<i class="fas fa-info-circle" data-original-title="Ремонт ' . (($lang === "ru") ? 'в течении' : 'протягом') . ' дня" data-container="body" data-toggle="tooltip" data-placement="top"></i>';
+                          ?></td>
+                          <td>₴<?php echo intval($value["price"]); ?></td>
                         </tr>
                         <?php $i++ ?>
                         <?php endforeach; ?>
@@ -152,7 +158,7 @@
                         <?php if ($i++ < 7) continue; ?>
                         <tr>
                           <td><?php echo $services[$value["service_id"] - 1][$lang];?></td>
-                          <td>₴<?php echo $value["price"]; ?></td>
+                          <td>₴<?php echo intval($value["price"]); ?></td>
                         </tr>
                         <?php endforeach; ?>
                         <tr>
