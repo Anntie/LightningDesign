@@ -1,10 +1,12 @@
 $(document).ready(function() {
   // Lazy image loading
-  [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
-    img.setAttribute('src', img.getAttribute('data-src'));
-    img.onload = function() {
-      img.removeAttribute('data-src');
-    };
+  $(window).on("load", function() {
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+        img.removeAttribute('data-src');
+      };
+    });
   });
 
   // Prevent <img> dragging
