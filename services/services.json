@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "eng": "Glass/screen replacement",
+    "ru": "Замена стекла/экрана",
+    "ukr": "Заміна скла/екрана"
+  },
+  {
+    "id": 2,
+    "eng": "Display replacement (high copy)",
+    "ru": "Замена дисплея (хорошая копия)",
+    "ukr": "Заміна дисплея (хороша копія)"
+  },
+  {
+    "id": 3,
+    "eng": "Display replacement (original)",
+    "ru": "Замена дисплея (оригинал с другого устройства)",
+    "ukr": "Заміна дисплея (оригінал з іншого пристрою)"
+  },
+  {
+    "id": 4,
+    "eng": "Battery replacement",
+    "ru": "Замена аккумулятора",
+    "ukr": "Заміна батареї"
+  },
+  {
+    "id": 5,
+    "eng": "Rear camera replacement",
+    "ru": "Замена основной камеры",
+    "ukr": "Заміна основної камери"
+  },
+  {
+    "id": 6,
+    "eng": "Front camera replacement",
+    "ru": "Замена фронтальной камеры",
+    "ukr": "Заміна фронтальної камери"
+  },
+  {
+    "id": 7,
+    "eng": "Home button replacement",
+    "ru": "Замена кнопки Home",
+    "ukr": "Заміна кнопки Home"
+  },
+  {
+    "id": 8,
+    "eng": "Earpiece speaker replacement",
+    "ru": "Замена слухового динамика",
+    "ukr": "Заміна слухового динаміка"
+  },
+  {
+    "id": 9,
+    "eng": "Loud speaker replacement",
+    "ru": "Замена полифонического динамика",
+    "ukr": "Заміна поліфонічного динаміка"
+  },
+  {
+    "id": 10,
+    "eng": "Lightning connector replacement",
+    "ru": "Замена разъема зарядки-синхронизации lightning",
+    "ukr": "Заміна роз'єму зарядки-синхронізації lightning"
+  },
+  {
+    "id": 11,
+    "eng": "Microphone replacement",
+    "ru": "Замена микрофона",
+    "ukr": "Заміна мікрофона"
+  },
+  {
+    "id": 12,
+    "eng": "Vibrator motor replacement",
+    "ru": "Замена вибромотора",
+    "ukr": "Заміна вібромотора"
+  }
+]
