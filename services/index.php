@@ -19,6 +19,9 @@
 		));
 	}
 
-	echo json_encode($result, JSON_UNESCAPED_UNICODE);
+	$json = json_encode($result, JSON_UNESCAPED_UNICODE);
 
+	if (!isset($_GET['require'])) {
+		echo $json;
+	}
 ?>

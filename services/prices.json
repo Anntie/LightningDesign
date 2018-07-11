@@ -74,73 +74,73 @@
   {
     "id": 13,
     "service_id": 1,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "599,00"
   },
   {
     "id": 14,
     "service_id": 2,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "999,00"
   },
   {
     "id": 15,
     "service_id": 3,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "1599,00"
   },
   {
     "id": 16,
     "service_id": 4,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "499,00"
   },
   {
     "id": 17,
     "service_id": 5,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "499,00"
   },
   {
     "id": 18,
     "service_id": 6,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "399,00"
   },
   {
     "id": 19,
     "service_id": 7,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "499,00"
   },
   {
     "id": 20,
     "service_id": 8,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "299,00"
   },
   {
     "id": 21,
     "service_id": 9,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "349,00"
   },
   {
     "id": 22,
     "service_id": 10,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "399,00"
   },
   {
     "id": 23,
     "service_id": 11,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "399,00"
   },
   {
     "id": 24,
     "service_id": 12,
-    "phone_model": "iPhone 5S",
+    "phone_model": "iPhone 5s",
     "price": "199,00"
   },
   {
@@ -362,145 +362,145 @@
   {
     "id": 61,
     "service_id": 1,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "999,00"
   },
   {
     "id": 62,
     "service_id": 2,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "1599,00"
   },
   {
     "id": 63,
     "service_id": 3,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "2199,00"
   },
   {
     "id": 64,
     "service_id": 4,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "599,00"
   },
   {
     "id": 65,
     "service_id": 5,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "1199,00"
   },
   {
     "id": 66,
     "service_id": 6,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "499,00"
   },
   {
     "id": 67,
     "service_id": 7,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "499,00"
   },
   {
     "id": 68,
     "service_id": 8,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "399,00"
   },
   {
     "id": 69,
     "service_id": 9,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "499,00"
   },
   {
     "id": 70,
     "service_id": 10,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "499,00"
   },
   {
     "id": 71,
     "service_id": 11,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "499,00"
   },
   {
     "id": 72,
     "service_id": 12,
-    "phone_model": "iPhone 6S",
+    "phone_model": "iPhone 6s",
     "price": "399,00"
   },
   {
     "id": 73,
     "service_id": 1,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "1499,00"
   },
   {
     "id": 74,
     "service_id": 2,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "2099,00"
   },
   {
     "id": 75,
     "service_id": 3,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "2999,00"
   },
   {
     "id": 76,
     "service_id": 4,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "649,00"
   },
   {
     "id": 77,
     "service_id": 5,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "1199,00"
   },
   {
     "id": 78,
     "service_id": 6,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "499,00"
   },
   {
     "id": 79,
     "service_id": 7,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "499,00"
   },
   {
     "id": 80,
     "service_id": 8,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "399,00"
   },
   {
     "id": 81,
     "service_id": 9,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "499,00"
   },
   {
     "id": 82,
     "service_id": 10,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "499,00"
   },
   {
     "id": 83,
     "service_id": 11,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "499,00"
   },
   {
     "id": 84,
     "service_id": 12,
-    "phone_model": "iPhone 6S+",
+    "phone_model": "iPhone 6s+",
     "price": "399,00"
   },
   {
