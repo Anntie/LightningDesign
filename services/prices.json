@@ -1,0 +1,686 @@
+[
+  {
+    "id": 1,
+    "service_id": 1,
+    "phone_model": "iPhone 5",
+    "price": "599,00"
+  },
+  {
+    "id": 2,
+    "service_id": 2,
+    "phone_model": "iPhone 5",
+    "price": "999,00"
+  },
+  {
+    "id": 3,
+    "service_id": 3,
+    "phone_model": "iPhone 5",
+    "price": "1499,00"
+  },
+  {
+    "id": 4,
+    "service_id": 4,
+    "phone_model": "iPhone 5",
+    "price": "499,00"
+  },
+  {
+    "id": 5,
+    "service_id": 5,
+    "phone_model": "iPhone 5",
+    "price": "499,00"
+  },
+  {
+    "id": 6,
+    "service_id": 6,
+    "phone_model": "iPhone 5",
+    "price": "399,00"
+  },
+  {
+    "id": 7,
+    "service_id": 7,
+    "phone_model": "iPhone 5",
+    "price": "499,00"
+  },
+  {
+    "id": 8,
+    "service_id": 8,
+    "phone_model": "iPhone 5",
+    "price": "299,00"
+  },
+  {
+    "id": 9,
+    "service_id": 9,
+    "phone_model": "iPhone 5",
+    "price": "349,00"
+  },
+  {
+    "id": 10,
+    "service_id": 10,
+    "phone_model": "iPhone 5",
+    "price": "399,00"
+  },
+  {
+    "id": 11,
+    "service_id": 11,
+    "phone_model": "iPhone 5",
+    "price": "399,00"
+  },
+  {
+    "id": 12,
+    "service_id": 12,
+    "phone_model": "iPhone 5",
+    "price": "199,00"
+  },
+  {
+    "id": 13,
+    "service_id": 1,
+    "phone_model": "iPhone 5S",
+    "price": "599,00"
+  },
+  {
+    "id": 14,
+    "service_id": 2,
+    "phone_model": "iPhone 5S",
+    "price": "999,00"
+  },
+  {
+    "id": 15,
+    "service_id": 3,
+    "phone_model": "iPhone 5S",
+    "price": "1599,00"
+  },
+  {
+    "id": 16,
+    "service_id": 4,
+    "phone_model": "iPhone 5S",
+    "price": "499,00"
+  },
+  {
+    "id": 17,
+    "service_id": 5,
+    "phone_model": "iPhone 5S",
+    "price": "499,00"
+  },
+  {
+    "id": 18,
+    "service_id": 6,
+    "phone_model": "iPhone 5S",
+    "price": "399,00"
+  },
+  {
+    "id": 19,
+    "service_id": 7,
+    "phone_model": "iPhone 5S",
+    "price": "499,00"
+  },
+  {
+    "id": 20,
+    "service_id": 8,
+    "phone_model": "iPhone 5S",
+    "price": "299,00"
+  },
+  {
+    "id": 21,
+    "service_id": 9,
+    "phone_model": "iPhone 5S",
+    "price": "349,00"
+  },
+  {
+    "id": 22,
+    "service_id": 10,
+    "phone_model": "iPhone 5S",
+    "price": "399,00"
+  },
+  {
+    "id": 23,
+    "service_id": 11,
+    "phone_model": "iPhone 5S",
+    "price": "399,00"
+  },
+  {
+    "id": 24,
+    "service_id": 12,
+    "phone_model": "iPhone 5S",
+    "price": "199,00"
+  },
+  {
+    "id": 25,
+    "service_id": 1,
+    "phone_model": "iPhone SE",
+    "price": "699,00"
+  },
+  {
+    "id": 26,
+    "service_id": 2,
+    "phone_model": "iPhone SE",
+    "price": "999,00"
+  },
+  {
+    "id": 27,
+    "service_id": 3,
+    "phone_model": "iPhone SE",
+    "price": "1999,00"
+  },
+  {
+    "id": 28,
+    "service_id": 4,
+    "phone_model": "iPhone SE",
+    "price": "599,00"
+  },
+  {
+    "id": 29,
+    "service_id": 5,
+    "phone_model": "iPhone SE",
+    "price": "599,00"
+  },
+  {
+    "id": 30,
+    "service_id": 6,
+    "phone_model": "iPhone SE",
+    "price": "499,00"
+  },
+  {
+    "id": 31,
+    "service_id": 7,
+    "phone_model": "iPhone SE",
+    "price": "499,00"
+  },
+  {
+    "id": 32,
+    "service_id": 8,
+    "phone_model": "iPhone SE",
+    "price": "349,00"
+  },
+  {
+    "id": 33,
+    "service_id": 9,
+    "phone_model": "iPhone SE",
+    "price": "399,00"
+  },
+  {
+    "id": 34,
+    "service_id": 10,
+    "phone_model": "iPhone SE",
+    "price": "399,00"
+  },
+  {
+    "id": 35,
+    "service_id": 11,
+    "phone_model": "iPhone SE",
+    "price": "399,00"
+  },
+  {
+    "id": 36,
+    "service_id": 12,
+    "phone_model": "iPhone SE",
+    "price": "199,00"
+  },
+  {
+    "id": 37,
+    "service_id": 1,
+    "phone_model": "iPhone 6",
+    "price": "999,00"
+  },
+  {
+    "id": 38,
+    "service_id": 2,
+    "phone_model": "iPhone 6",
+    "price": "1499,00"
+  },
+  {
+    "id": 39,
+    "service_id": 3,
+    "phone_model": "iPhone 6",
+    "price": "1999,00"
+  },
+  {
+    "id": 40,
+    "service_id": 4,
+    "phone_model": "iPhone 6",
+    "price": "599,00"
+  },
+  {
+    "id": 41,
+    "service_id": 5,
+    "phone_model": "iPhone 6",
+    "price": "599,00"
+  },
+  {
+    "id": 42,
+    "service_id": 6,
+    "phone_model": "iPhone 6",
+    "price": "499,00"
+  },
+  {
+    "id": 43,
+    "service_id": 7,
+    "phone_model": "iPhone 6",
+    "price": "499,00"
+  },
+  {
+    "id": 44,
+    "service_id": 8,
+    "phone_model": "iPhone 6",
+    "price": "399,00"
+  },
+  {
+    "id": 45,
+    "service_id": 9,
+    "phone_model": "iPhone 6",
+    "price": "499,00"
+  },
+  {
+    "id": 46,
+    "service_id": 10,
+    "phone_model": "iPhone 6",
+    "price": "399,00"
+  },
+  {
+    "id": 47,
+    "service_id": 11,
+    "phone_model": "iPhone 6",
+    "price": "399,00"
+  },
+  {
+    "id": 48,
+    "service_id": 12,
+    "phone_model": "iPhone 6",
+    "price": "299,00"
+  },
+  {
+    "id": 49,
+    "service_id": 1,
+    "phone_model": "iPhone 6+",
+    "price": "1499,00"
+  },
+  {
+    "id": 50,
+    "service_id": 2,
+    "phone_model": "iPhone 6+",
+    "price": "1999,00"
+  },
+  {
+    "id": 51,
+    "service_id": 3,
+    "phone_model": "iPhone 6+",
+    "price": "2499,00"
+  },
+  {
+    "id": 52,
+    "service_id": 4,
+    "phone_model": "iPhone 6+",
+    "price": "649,00"
+  },
+  {
+    "id": 53,
+    "service_id": 5,
+    "phone_model": "iPhone 6+",
+    "price": "599,00"
+  },
+  {
+    "id": 54,
+    "service_id": 6,
+    "phone_model": "iPhone 6+",
+    "price": "499,00"
+  },
+  {
+    "id": 55,
+    "service_id": 7,
+    "phone_model": "iPhone 6+",
+    "price": "499,00"
+  },
+  {
+    "id": 56,
+    "service_id": 8,
+    "phone_model": "iPhone 6+",
+    "price": "399,00"
+  },
+  {
+    "id": 57,
+    "service_id": 9,
+    "phone_model": "iPhone 6+",
+    "price": "499,00"
+  },
+  {
+    "id": 58,
+    "service_id": 10,
+    "phone_model": "iPhone 6+",
+    "price": "499,00"
+  },
+  {
+    "id": 59,
+    "service_id": 11,
+    "phone_model": "iPhone 6+",
+    "price": "499,00"
+  },
+  {
+    "id": 60,
+    "service_id": 12,
+    "phone_model": "iPhone 6+",
+    "price": "299,00"
+  },
+  {
+    "id": 61,
+    "service_id": 1,
+    "phone_model": "iPhone 6S",
+    "price": "999,00"
+  },
+  {
+    "id": 62,
+    "service_id": 2,
+    "phone_model": "iPhone 6S",
+    "price": "1599,00"
+  },
+  {
+    "id": 63,
+    "service_id": 3,
+    "phone_model": "iPhone 6S",
+    "price": "2199,00"
+  },
+  {
+    "id": 64,
+    "service_id": 4,
+    "phone_model": "iPhone 6S",
+    "price": "599,00"
+  },
+  {
+    "id": 65,
+    "service_id": 5,
+    "phone_model": "iPhone 6S",
+    "price": "1199,00"
+  },
+  {
+    "id": 66,
+    "service_id": 6,
+    "phone_model": "iPhone 6S",
+    "price": "499,00"
+  },
+  {
+    "id": 67,
+    "service_id": 7,
+    "phone_model": "iPhone 6S",
+    "price": "499,00"
+  },
+  {
+    "id": 68,
+    "service_id": 8,
+    "phone_model": "iPhone 6S",
+    "price": "399,00"
+  },
+  {
+    "id": 69,
+    "service_id": 9,
+    "phone_model": "iPhone 6S",
+    "price": "499,00"
+  },
+  {
+    "id": 70,
+    "service_id": 10,
+    "phone_model": "iPhone 6S",
+    "price": "499,00"
+  },
+  {
+    "id": 71,
+    "service_id": 11,
+    "phone_model": "iPhone 6S",
+    "price": "499,00"
+  },
+  {
+    "id": 72,
+    "service_id": 12,
+    "phone_model": "iPhone 6S",
+    "price": "399,00"
+  },
+  {
+    "id": 73,
+    "service_id": 1,
+    "phone_model": "iPhone 6S+",
+    "price": "1499,00"
+  },
+  {
+    "id": 74,
+    "service_id": 2,
+    "phone_model": "iPhone 6S+",
+    "price": "2099,00"
+  },
+  {
+    "id": 75,
+    "service_id": 3,
+    "phone_model": "iPhone 6S+",
+    "price": "2999,00"
+  },
+  {
+    "id": 76,
+    "service_id": 4,
+    "phone_model": "iPhone 6S+",
+    "price": "649,00"
+  },
+  {
+    "id": 77,
+    "service_id": 5,
+    "phone_model": "iPhone 6S+",
+    "price": "1199,00"
+  },
+  {
+    "id": 78,
+    "service_id": 6,
+    "phone_model": "iPhone 6S+",
+    "price": "499,00"
+  },
+  {
+    "id": 79,
+    "service_id": 7,
+    "phone_model": "iPhone 6S+",
+    "price": "499,00"
+  },
+  {
+    "id": 80,
+    "service_id": 8,
+    "phone_model": "iPhone 6S+",
+    "price": "399,00"
+  },
+  {
+    "id": 81,
+    "service_id": 9,
+    "phone_model": "iPhone 6S+",
+    "price": "499,00"
+  },
+  {
+    "id": 82,
+    "service_id": 10,
+    "phone_model": "iPhone 6S+",
+    "price": "499,00"
+  },
+  {
+    "id": 83,
+    "service_id": 11,
+    "phone_model": "iPhone 6S+",
+    "price": "499,00"
+  },
+  {
+    "id": 84,
+    "service_id": 12,
+    "phone_model": "iPhone 6S+",
+    "price": "399,00"
+  },
+  {
+    "id": 85,
+    "service_id": 1,
+    "phone_model": "iPhone 7",
+    "price": "1799,00"
+  },
+  {
+    "id": 86,
+    "service_id": 2,
+    "phone_model": "iPhone 7",
+    "price": "1999,00"
+  },
+  {
+    "id": 87,
+    "service_id": 3,
+    "phone_model": "iPhone 7",
+    "price": "2999,00"
+  },
+  {
+    "id": 88,
+    "service_id": 4,
+    "phone_model": "iPhone 7",
+    "price": "599,00"
+  },
+  {
+    "id": 89,
+    "service_id": 5,
+    "phone_model": "iPhone 7",
+    "price": "1299,00"
+  },
+  {
+    "id": 90,
+    "service_id": 6,
+    "phone_model": "iPhone 7",
+    "price": "499,00"
+  },
+  {
+    "id": 91,
+    "service_id": 7,
+    "phone_model": "iPhone 7",
+    "price": "499,00"
+  },
+  {
+    "id": 92,
+    "service_id": 8,
+    "phone_model": "iPhone 7",
+    "price": "399,00"
+  },
+  {
+    "id": 93,
+    "service_id": 9,
+    "phone_model": "iPhone 7",
+    "price": "499,00"
+  },
+  {
+    "id": 94,
+    "service_id": 10,
+    "phone_model": "iPhone 7",
+    "price": "599,00"
+  },
+  {
+    "id": 95,
+    "service_id": 11,
+    "phone_model": "iPhone 7",
+    "price": "599,00"
+  },
+  {
+    "id": 96,
+    "service_id": 12,
+    "phone_model": "iPhone 7",
+    "price": "499,00"
+  },
+  {
+    "id": 97,
+    "service_id": 1,
+    "phone_model": "iPhone 7+",
+    "price": "2199,00"
+  },
+  {
+    "id": 98,
+    "service_id": 2,
+    "phone_model": "iPhone 7+",
+    "price": "2599,00"
+  },
+  {
+    "id": 99,
+    "service_id": 3,
+    "phone_model": "iPhone 7+",
+    "price": "4999,00"
+  },
+  {
+    "id": 100,
+    "service_id": 4,
+    "phone_model": "iPhone 7+",
+    "price": "699,00"
+  },
+  {
+    "id": 101,
+    "service_id": 5,
+    "phone_model": "iPhone 7+",
+    "price": "2499,00"
+  },
+  {
+    "id": 102,
+    "service_id": 6,
+    "phone_model": "iPhone 7+",
+    "price": "599,00"
+  },
+  {
+    "id": 103,
+    "service_id": 7,
+    "phone_model": "iPhone 7+",
+    "price": "499,00"
+  },
+  {
+    "id": 104,
+    "service_id": 8,
+    "phone_model": "iPhone 7+",
+    "price": "499,00"
+  },
+  {
+    "id": 105,
+    "service_id": 9,
+    "phone_model": "iPhone 7+",
+    "price": "599,00"
+  },
+  {
+    "id": 106,
+    "service_id": 10,
+    "phone_model": "iPhone 7+",
+    "price": "599,00"
+  },
+  {
+    "id": 107,
+    "service_id": 11,
+    "phone_model": "iPhone 7+",
+    "price": "599,00"
+  },
+  {
+    "id": 108,
+    "service_id": 12,
+    "phone_model": "iPhone 7+",
+    "price": "499,00"
+  },
+  {
+    "id": 109,
+    "service_id": 1,
+    "phone_model": "iPhone 8",
+    "price": "2499,00"
+  },
+  {
+    "id": 110,
+    "service_id": 3,
+    "phone_model": "iPhone 8",
+    "price": "7999,00"
+  },
+  {
+    "id": 111,
+    "service_id": 1,
+    "phone_model": "iPhone 8+",
+    "price": "3499,00"
+  },
+  {
+    "id": 112,
+    "service_id": 3,
+    "phone_model": "iPhone 8+",
+    "price": "9999,00"
+  },
+  {
+    "id": 113,
+    "service_id": 1,
+    "phone_model": "iPhone X",
+    "price": "5999,00"
+  },
+  {
+    "id": 114,
+    "service_id": 3,
+    "phone_model": "iPhone X",
+    "price": "15999,00"
+  }
+]

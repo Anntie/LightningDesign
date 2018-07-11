@@ -1,0 +1,38 @@
+[
+  {
+    "model": "5",
+    "hasPlus": false
+  },
+  {
+    "model": "5s",
+    "hasPlus": false
+  },
+  {
+    "model": "5s",
+    "hasPlus": false
+  },
+  {
+    "model": "SE",
+    "hasPlus": false
+  },
+  {
+    "model": "6",
+    "hasPlus": true
+  },
+  {
+    "model": "6s",
+    "hasPlus": true
+  },
+  {
+    "model": "7",
+    "hasPlus": true
+  },
+  {
+    "model": "8",
+    "hasPlus": true
+  },
+  {
+    "model": "X",
+    "hasPlus": false
+  }
+]
